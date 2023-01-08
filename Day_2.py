@@ -163,3 +163,47 @@ print("Two digit sum digit sum calculator\n by Mehrzad Barzegar")
 two_digit_number = input("Please type a two digit number (From 10 to 99) ")
 result = (int(two_digit_number[0])) + (int(two_digit_number[1]))
 print(result)
+
+# Mathematical Operations
+
+
+35 + 532
+23 - 45
+34 * 45
+654 / 345
+234 ** 23
+
+# They come into an order, which needs to be followed when solving
+
+# '"PEMDAS
+# It stands for:
+# Paranthesis ()
+# Exponents **
+# Multiplication *
+# Division /
+# Addition +
+# Subtraction -"
+
+# A quick demo to test the order of functions
+
+print(2 * 4 / 15 - 12 + 5)
+print(3 * 3 + 3 / 3 - 3)
+print(3 * (3 + 3) / 3 - 3)
+
+# Code Challenge 2.2
+# This challenge requires you to make a BMI Calculator
+
+height = float(input("Enter your height in m: "))
+weight = float(input("Enter your weight in kg: "))
+
+bmi = ((weight)/(height ** 2))
+print(int(bmi))
+
+if bmi >= 30:
+    print("Obese: Consult your physician immediately.")
+elif 25 <= bmi < 30:
+    print("Overwight: Consider going on a diet under supervision.")
+elif 18.5 <= bmi < 25:
+    print("Normal weight: Your body is in shape.")
+else:
+    print("Underwight: Consider visiting a nutrientist.")
