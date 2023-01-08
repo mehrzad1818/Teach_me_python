@@ -207,3 +207,37 @@ elif 18.5 <= bmi < 25:
     print("Normal weight: Your body is in shape.")
 else:
     print("Underwight: Consider visiting a nutrientist.")
+
+# This part contains Number Manipulation and F strings
+
+# Now we are learning how to round numbers with round()
+
+single_slash = (round(8 / 3, 2))
+print(type(single_slash))
+print(single_slash)
+
+# We can use floor division (part of floor and ceiling function)
+
+double_slash = (8 // 5)
+print(type(double_slash))
+print(double_slash)
+
+# "So, you might ask what's the point of using one over another?
+# The answer is that you can continue manipulating values in different scenarios
+# when dealing with the code."
+
+result = 4 / 2
+result /= 2
+print(result)
+
+# Basically these signs ( += *= -= /=) means that the follwing value will be applied to that variable
+# Take a loot at these examples
+
+score = 0
+score += 1
+score += 1
+score += 1
+print(score)
+
+
+# Using single slash turns your result into float versus using double slash turns it in to interger
