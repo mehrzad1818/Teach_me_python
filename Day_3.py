@@ -52,9 +52,78 @@ age = int(input("How old are you? "))
 
 if height >= 120:
     print("You are good to go.")
-    if age = > 18:
+    if age >= 18:
         print("You should pay 20$.")
     else:
         print("You should pay 10$.")
 else:
     print("Return when you grow up.")
+
+# If you have more conditions, you can add more conditions by using elif, like this:
+
+print("Welcome to the rollercoaster!\n")
+
+height = int(input("What is your height in cm? "))
+
+if height >= 120:
+    print("You are good to you.")
+    age = int(input("How old are you? "))
+    if age <= 12:
+        print("You should pay 10$.")
+    elif age <= 18:
+        print("You should pay 15$.")
+    else:
+        print("You should pay 20$.")
+else:
+    print("Get back here when you are taller!")
+
+# This is somehow a little bit more complex
+
+print("Welcome to the rollercoaster!\n")
+
+height = int(input("What is your height in cm? "))
+
+if height >= 120:
+    print("You are good to you.")
+
+    age = int(input("How old are you? "))
+
+    if age <= 12:
+        print("You should pay 10$.")
+
+        toys = int(input("How many toys do you have? "))
+
+        if toys <= 5:
+            print("You will get a free toy at the end of your ride!")
+
+        else:
+            print("There is no free toy for you!")
+
+    elif age <= 18:
+        print("You should pay 15$.")
+        girlfriend = int(input("How many girlfriend do you have? "))
+
+        if girlfriend == 0:
+            print("Get a girlfriend before hopping on this rollercoaster!")
+        elif girlfriend > 1:
+            print(
+                "You are a traitor and you are not welcommed here. Leave the area immediately!")
+        else:
+            print("You are a man of culture my friend.")
+    else:
+        print("You should pay 20$.")
+        sex = int(input("How often do you have sex in a month? "))
+        if sex >= 10:
+            condom = int(input("Do you use condoms? (1 for Yes, 0 for No) "))
+            if condom == 1:
+                print("Nice job! Stay safe.")
+            else:
+                print("You should always wear one!")
+        elif 0 < sex < 10:
+            print("You should have more sexual activity.")
+        else:
+            print("Hire a dick.")
+
+
+else:
+    print("Get back here when you are taller!")
