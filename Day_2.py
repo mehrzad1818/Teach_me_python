@@ -1,4 +1,4 @@
-# Welcome to Day 1 of 100 Days coding challenge
+# Welcome to Day 2 of 100 Days coding challenge
 
 # '"This module is about Data types, which we're going to
 # learn 4 types of them, that is: string, float,
@@ -298,3 +298,5 @@ finalformat = int("{:.2f}".format(total_bill_with_tip_and_split))
 
 final_share_message = f"Each person should pay: {finalformat}"
 print(final_share_message)
+
+# This is the end of 2nd Day
