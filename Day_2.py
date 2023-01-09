@@ -217,6 +217,7 @@ print(type(single_slash))
 print(single_slash)
 
 # We can use floor division (part of floor and ceiling function)
+# Using single slash turns your result into float versus using double slash turns it in to interger
 
 double_slash = (8 // 5)
 print(type(double_slash))
@@ -239,5 +240,61 @@ score += 1
 score += 1
 print(score)
 
+# Now, we'll learn about F strings
+# They are used to put different data types together
 
-# Using single slash turns your result into float versus using double slash turns it in to interger
+print("your score is " + str(score))
+
+# Take a look at this example here:
+
+score = 120
+height = 1.85
+isLosing = False
+
+print(
+    f"Your score is {score} and your height is {height}, therefore your losing status is {isLosing}")
+
+
+# This is coding challenge 2.3
+# Your life in weeks and remaining time if you live up to 90 years old
+
+age = int(input("What is your current age? "))
+
+ninty_yo_months = 90 * 12 - age * 12
+ninty_yo_weeks = 90 * 52 - age * 52
+ninty_yo_days = 90 * 365 - age * 365
+
+message = f"You have {ninty_yo_days}, {ninty_yo_weeks} weeks and {ninty_yo_months} months left."
+print(message)
+
+# I somehow managed to modfity what was in the original instruction
+
+# "This final code challenge of today is about how to make a 'Tip calculator'
+
+total_bill = float(input("What was the total bill? $"))
+percentage_tip = float(
+    input("What percentage of tip would you like to give? "))
+total_people = float(input("How many people to split the bill? "))
+
+
+total_bill_with_tip_and_split = round((
+    (total_bill + ((total_bill / 100) * percentage_tip)) / total_people), 2)
+
+
+final_share_message = f"Each person should pay: {total_bill_with_tip_and_split}"
+print(final_share_message)
+
+# An easier version would be like this (refined):
+
+total_bill = float(input("What was the total bill? $"))
+percentage_tip = float(
+    input("What percentage of tip would you like to give? (Don't type % percentage sign) "))
+total_people = float(input("How many people to split the bill? "))
+
+
+total_bill_with_tip = ((total_bill + ((total_bill / 100) * percentage_tip)))
+total_bill_with_tip_and_split = round((total_bill_with_tip / total_people), 2)
+finalformat = int("{:.2f}".format(total_bill_with_tip_and_split))
+
+final_share_message = f"Each person should pay: {finalformat}"
+print(final_share_message)
