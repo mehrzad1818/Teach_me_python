@@ -84,11 +84,11 @@ print("Welcome to the rollercoaster!\n")
 height = int(input("What is your height in cm? "))
 
 if height >= 120:
+    age = int(input("How old are you? "))
     print("You are good to you.")
 
-    age = int(input("How old are you? "))
-
     if age <= 12:
+
         print("You should pay 10$.")
 
         toys = int(input("How many toys do you have? "))
@@ -124,6 +124,28 @@ if height >= 120:
         else:
             print("Hire a dick.")
 
-
 else:
     print("Get back here when you are taller!")
+
+# Above, I basically went to far with if, elif and else (somehow too far,) and used nested code to have a multifaceted code.
+
+
+# Code challenge 3.2 is BMI Calculator version 2.0
+
+
+print("Welcome to BMI Calculator.\n")
+height = float(input("Enter your height in m: "))
+weight = float(input("Enter your weight in kg: "))
+
+bmi = round(((weight // (height ** 2))))
+
+if bmi <= 18.5:
+    print(f"Your BMI is {bmi}. You are underweight.")
+elif 18.5 < bmi <= 25:
+    print(f"Your BMI is {bmi}. You have a normal weight.")
+elif 25 < bmi <= 30:
+    print(f"Your BMI is {bmi}. You are overweight.")
+elif 30 < bmi <= 35:
+    print(f"Your BMI is {bmi}. You are obese.")
+else:
+    print(f"Your BMI is {bmi}. You are clinically obese.")
