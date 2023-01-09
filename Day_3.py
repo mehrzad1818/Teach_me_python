@@ -31,12 +31,30 @@ else:
 
 
 # New Code Challenge: 3.1
+# In this challenge, you are to build an odd/even checker using basic mathematical operations and common sense!
+
 
 number = int(input("Which number do you want to check?\n"))
 
-moduloed = (number % 2)
-
-if moduloed == 0:
+if ((number % 2) == (0)):
     print("Your number is even!")
 else:
     print("Your number is odd!")
+
+# Nested if/else
+# Nesting basically means putting another if condition into another condition.
+
+
+print("Welcome to the rollercoaster!")
+
+height = int(input("What is your height in cm? "))
+age = int(input("How old are you? "))
+
+if height >= 120:
+    print("You are good to go.")
+    if age = > 18:
+        print("You should pay 20$.")
+    else:
+        print("You should pay 10$.")
+else:
+    print("Return when you grow up.")
