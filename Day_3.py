@@ -158,3 +158,10 @@ weight = float(input("Enter your weight in kg: "))
 bmi = round(((weight // (height ** 2))))
 
 if bmi < 20:
+    print("This person is fat")
+elif 10 < bmi <= 20:
+    print("This person is thin")
+
+
+
+
