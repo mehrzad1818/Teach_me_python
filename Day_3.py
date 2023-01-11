@@ -150,4 +150,11 @@ elif bmi < 35:
 else:
     print(f"Your BMI is {bmi}. You are clinically obese.")
 
-# Code challenge 3.3 Leap year calculator
+# Revised BMI calculator
+
+height = float(input("Enter your height in m: "))
+weight = float(input("Enter your weight in kg: "))
+
+bmi = round(((weight // (height ** 2))))
+
+if bmi < 20:
