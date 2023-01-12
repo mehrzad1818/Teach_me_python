@@ -158,6 +158,8 @@ else:
 # except every year that is evenly divisible by 100
 # unless the year is also evenly divisible by 400"
 
+# The form I come up with is like this:
+
 year = int(input("Which year do you want to check? "))
 
 if (year % 4) == (0):
@@ -166,3 +168,18 @@ if (year % 4) == (0):
             print(f"{year} is a leap year.")
 else:
     print(f"{year} is not a leap year.")
+
+# Versus this one which was proposed in the video course.
+
+year = int(input("WHich year do you want to check? "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("Not leap year.")
