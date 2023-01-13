@@ -183,3 +183,38 @@ if year % 4 == 0:
         print("Leap year.")
 else:
     print("Not leap year.")
+
+# Now that we are done with the challenge, this part contains if/elif/else statements
+
+# Multiple if conditions:
+
+# "Take a look at this example
+
+# if condition1:
+#   do A
+# if condition2:
+#   do B
+# if condition3:
+#   do C
+#
+# "
+
+print("Welcome to the rollercoaster!\n")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("How old are you? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
+    wants_photo = input("Do you want a photograph? Y or N. ")
+    if wants_photo == "Y":
+        bill += 3
