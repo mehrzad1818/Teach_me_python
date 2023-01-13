@@ -218,3 +218,50 @@ if height >= 120:
     wants_photo = input("Do you want a photograph? Y or N. ")
     if wants_photo == "Y":
         bill += 3
+else:
+    print("Grow up!")
+
+# " The code above although contained basic
+# principles of formatting and multiple if, nested if, and elif else conditions
+# I found it rather confusing due to its hierarchical nature."
+
+# Code Challenge!
+# This is code challenge 3.4 and its name is Python Pizza Order Program (PPOP)
+
+print("Welcome to Python Pizza Order Program (PPOP).\n")
+
+size = input("What size pizza do you want? S, M or L\n")
+add_pepperoni = input("Do you want pepperoni? Y or N\n")
+extra_cheese = input("Do you want extra cheese? Y or N\n")
+bill = 0
+
+if size == "S":
+    bill = 15
+    if add_pepperoni == "Y":
+        bill += 2
+        print(f"Your bill is ${bill}.")
+    if extra_cheese == "Y":
+        bill += 1
+        print(f"Your bill is ${bill}.")
+    else:
+        print(f"Your bill is {bill}.")
+if size == "M":
+    bill = 20
+    if add_pepperoni == "Y":
+        bill += 3
+        print(f"Your bill is ${bill}.")
+    if extra_cheese == "Y":
+        bill += 1
+        print(f"Your bill is ${bill}.")
+    else:
+        print(f"Your bill is {bill}.")
+if size == "L":
+    bill = 25
+    if add_pepperoni == "Y":
+        bill += 3
+        print(f"Your bill is ${bill}.")
+    if extra_cheese == "Y":
+        bill += 1
+        print(f"Your bill is ${bill}.")
+    else:
+        print(f"Your bill is {bill}.")
