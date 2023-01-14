@@ -333,11 +333,31 @@ else:
 # Another code challenge!
 # Day 3.5 Love Calculator Exercise
 
-print("Welcome to the Love Calculator!")
+print("Welcome to the Love Calculator!\n")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 
 name1lower = name1.lower()
 name2lower = name2.lower()
 
-count
+T_counts = int(name1lower.count("t") + name2lower.count("t"))
+R_counts = int(name1lower.count("r") + name2lower.count("r"))
+U_counts = int(name1lower.count("u") + name2lower.count("u"))
+E_counts = int(name1lower.count("e") + name2lower.count("e"))
+
+L_counts = int(name1lower.count("l") + name2lower.count("l"))
+O_counts = int(name1lower.count("o") + name2lower.count("o"))
+V_counts = int(name1lower.count("v") + name2lower.count("v"))
+E_counts = int(name1lower.count("e") + name2lower.count("e"))
+
+first_digit = T_counts + R_counts + U_counts + E_counts
+second_digit = L_counts + O_counts + V_counts + E_counts
+whole_number = first_digit * 10 + second_digit
+
+if whole_number > 90:
+    print(
+        f"Your score is {whole_number}, you go together like coke and mentos.")
+elif whole_number > 40 and whole_number < 50:
+    print(f"Your score is {whole_number}, you are alright together.")
+else:
+    print(f"Your score is {whole_number}.")
