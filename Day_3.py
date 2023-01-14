@@ -336,3 +336,8 @@ else:
 print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
+
+name1lower = name1.lower()
+name2lower = name2.lower()
+
+count
