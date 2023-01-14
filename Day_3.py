@@ -297,3 +297,42 @@ print(f"Your total bill is ${bill}")
 # Logical Operators
 
 # Now we are going to find about how to chain multiple conditions in the same line of code
+# "
+# A and B
+# C or D
+# not E
+# "
+
+# We're going to modify our previous code and add "free tickets for those dealing with
+# middlelife crisis" into our code using logical operators.
+
+print("Welcome to the rollercoaster!\n")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("How old are you? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
+    elif age >= 45 and age <= 55:
+        print("Carry on! You are half the way through. Your ticket is payed by the government.")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
+    wants_photo = input("Do you want a photograph? Y or N. ")
+    if wants_photo == "Y":
+        bill += 3
+else:
+    print("Grow up!")
+
+# Another code challenge!
+# Day 3.5 Love Calculator Exercise
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
