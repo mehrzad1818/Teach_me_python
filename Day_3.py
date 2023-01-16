@@ -354,6 +354,35 @@ first_digit = T_counts + R_counts + U_counts + E_counts
 second_digit = L_counts + O_counts + V_counts + E_counts
 whole_number = first_digit * 10 + second_digit
 
+if whole_number < 10 or whole_number > 90:
+    print(
+        f"Your score is {whole_number}, you go together like coke and mentos.")
+elif whole_number > 40 and whole_number < 50:
+    print(f"Your score is {whole_number}, you are alright together.")
+else:
+    print(f"Your score is {whole_number}.")
+
+# One more time with more efficiency
+
+print("Welcome to the Love Calculator!\n")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+low_name_str_comb = (name1 + name2).lower
+
+T = int(low_name_str_comb.count("t"))
+R = int(low_name_str_comb.count("r"))
+U = int(low_name_str_comb.count("u"))
+E = int(low_name_str_comb.count("e"))
+L = int(low_name_str_comb.count("l"))
+O = int(low_name_str_comb.count("o"))
+V = int(low_name_str_comb.count("v"))
+
+truedigit = T + R + U + E
+lovedigit = L + O + V + E
+
+lovescore = int((str(truedigit) + str(lovedigit)))
+
 if whole_number > 90:
     print(
         f"Your score is {whole_number}, you go together like coke and mentos.")
