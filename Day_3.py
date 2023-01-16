@@ -399,13 +399,13 @@ else:
 print("Welcome to Treasure Island.\n Your mission is to find the treasure.\n")
 
 left_or_right = input(
-    "You'll arrive at a crossroad, you can either go right or left.\nThere's a thick forest on the right and a rocky cliff on the left.\nWhich way do you go? Type 'left' or 'right'.\n")
+    "You'll arrive at a crossroad, you can either go right or left.\nThere's a thick forest on the right and a rocky cliff on the left.\nWhich way do you go? Type 'left' or 'right'.\n").lower()
 if left_or_right == "right":
     print("You walk down the rainforest, as you are following the path, a snake bites your ankle and you have a horrible death.\nGAME OVER")
 else:
     print("You climb the rocks. You fall down in the river while climbing a loose rock. You survive the fall but your head aches a lot.\n")
 
-    swim_or_wait = input("You a are in the river. The water flows to north, where your plane was crashed.\nThere's another worn path next to the river that might leads to a hut.\nWhich way do you go? Do you swim or walk to the worn path? Type 'swim' or 'walk'.\n")
+    swim_or_wait = input("You a are in the river. The water flows to north, where your plane was crashed.\nThere's another worn path next to the river that might leads to a hut.\nWhich way do you go? Do you swim or walk to the worn path? Type 'swim' or 'walk'.\n").lower()
 
     if swim_or_wait == "swim":
         print("You follow the run of the river. As you move forward, the stream gets more powerful.\nYou are floating now and in front of you there's a waterfall.\nYour head explodes after falling down. Even carnivore fish are not interested in your mutilated corpse.\nGAME OVER")
@@ -413,7 +413,7 @@ else:
         print("You arrive at the hut. It's old but it's strangely spacious.")
 
         red_blue_yellow = input(
-            "There are three doors in front of you. Which one do you open? Type 'red', 'blue' or 'yellow'.")
+            "There are three doors in front of you. Which one do you open? Type 'red', 'blue' or 'yellow'.").lower()
         if red_blue_yellow == "red":
             print(
                 "A loaded shotgun was wiretrapped to the door. Your head explodes from the shot.\nGAME OVER")
