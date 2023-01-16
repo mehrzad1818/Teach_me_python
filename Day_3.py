@@ -390,3 +390,19 @@ elif whole_number > 40 and whole_number < 50:
     print(f"Your score is {whole_number}, you are alright together.")
 else:
     print(f"Your score is {whole_number}.")
+
+
+#This is the final code challenge which is about making a story-driven code.
+#This is somwhow the most basic form of video games.
+#It reminded me of Fallout game.
+
+print("Welcome to Treasure Island.\n Your mission is to find the treasure.\n")
+
+left_or_right = input(
+    "You'll arrive at a crossroad, you can either go right or left.\nThere's a thick forest on the right and a rocky cliff on the left.\n Which way do you go? Type 'left' or 'right'.\n")
+if left_or_right == "right":
+    print("You walk down the rainforest, as you are following the path, a snake bites your ankle and you have a horrible death.\n GAME OVER")
+else:
+    print("You climb the rocks. You fall down in the river while climbing a loose rock. You survive the fall but your head aches a lot.\n")
+
+swim_or_wait = input("You a are in the river. The water flows to north, where your plane was crashed. There's another worn path next to the river that might leads to a hut.\nWhich way do you go? Do you swim or walk to the worn path? Type 'swim' or 'walk'.\n")
