@@ -88,3 +88,24 @@ print(fruits)
 states_of_america = ["Delaware", "Pennsylvania",
                      "New Jersey", "Georgia", "Connecticut", "Hawaii"]
 print(states_of_america[0])
+
+# You can modify the things in the list too
+
+states_of_america[3] = "Jorjia"
+print(states_of_america)
+
+# append function will add things to end of a list
+
+states_of_america.append("Moroland")
+print(states_of_america)
+
+# Challenge 4.2
+names_string = input(
+    "Give me the name of people who are at the table. (Separate names by a comma.)\n")
+
+actual_list = names_string.split(", ")
+counted_list = len(actual_list)
+randominteger = random.randint(0, counted_list - 1)
+chosen_person = actual_list[randominteger]
+
+print(f"{chosen_person} is going to pay the bill.")
