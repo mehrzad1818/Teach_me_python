@@ -99,7 +99,7 @@ print(states_of_america)
 states_of_america.append("Moroland")
 print(states_of_america)
 
-# Challenge 4.2
+# Challenge 4.2 - This challenge's name is Bill Roulette
 names_string = input(
     "Give me the name of people who are at the table. (Separate names by a comma.)\n")
 
@@ -108,4 +108,12 @@ counted_list = len(actual_list)
 randominteger = random.randint(0, counted_list - 1)
 chosen_person = actual_list[randominteger]
 
+print(f"{chosen_person} is going to pay the bill.")
+
+# More efficient way is like this to do bill roulette
+
+names_string = input(
+    "Give me the name of people who are at the table. (Separate names by a comma.)\n")
+actual_list = names_string.split(", ")
+chosen_person = random.choice(actual_list)
 print(f"{chosen_person} is going to pay the bill.")
