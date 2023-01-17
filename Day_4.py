@@ -83,4 +83,8 @@ print(fruits)
 fruits = ["Cherry", "Apple", "Pear"]
 print(fruits)
 
-# In this project
+# In this project, we'll list the US states.
+
+states_of_america = ["Delaware", "Pennsylvania",
+                     "New Jersey", "Georgia", "Connecticut", "Hawaii"]
+print(states_of_america[0])
