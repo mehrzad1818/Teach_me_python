@@ -66,3 +66,21 @@ if random_side == 0:
     print("Tails")
 else:
     print("Heads")
+
+# This part of the tutorial deals with Lists in Python
+
+# A basic example would be like this:
+
+item1 = "banana"
+item2 = "apple"
+
+fruits = [item1, item2]
+
+print(fruits)
+
+# List always starts and ends with square brackets.
+
+fruits = ["Cherry", "Apple", "Pear"]
+print(fruits)
+
+# In this project
