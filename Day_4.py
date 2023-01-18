@@ -133,8 +133,3 @@ listed_vegetables = listed_dirty_dozen - listed_fruits
 
 sortedlisted_dirty_dozen = [listed_fruits, listed_vegetables]
 print(sortedlisted_dirty_dozen)
-
-a = [-2, 1, 5, 3, 8, 5, 6]
-b = [1, 2, 5]
-c = [a[i] for i in b]
-print(c)
