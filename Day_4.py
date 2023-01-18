@@ -117,3 +117,14 @@ names_string = input(
 actual_list = names_string.split(", ")
 chosen_person = random.choice(actual_list)
 print(f"{chosen_person} is going to pay the bill.")
+
+# Here's a list of dirty dozen
+
+dirty_dozen = "Strawberries, Spinach, Kale, Nectarines, Apples, Grapes, Peaches, Cherries, Pears, Tomatoes, Celery, Potatoes"
+listed_dirty_dozen = dirty_dozen.split(", ")
+
+listed_fruits = listed_dirty_dozen.index[0, 3, 4, 5, 6, 7, 8]
+listed_vegetables = listed_dirty_dozen - listed_fruits
+
+sortedlisted_dirty_dozen = [listed_fruits, listed_vegetables]
+print(sortedlisted_dirty_dozen)
