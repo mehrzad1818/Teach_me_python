@@ -167,10 +167,10 @@ if columndigit == 3 and rowdigit == 2:
     row2[2] = "X"
 
 if columndigit == 1 and rowdigit == 3:
-    row2[0] = "X"
+    row3[0] = "X"
 if columndigit == 2 and rowdigit == 3:
-    row2[1] = "X"
+    row3[1] = "X"
 if columndigit == 3 and rowdigit == 3:
-    row2[2] = "X"
+    row3[2] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
