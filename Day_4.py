@@ -174,3 +174,26 @@ if columndigit == 3 and rowdigit == 3:
     row3[2] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
+
+# The code that I typed above does not include the parts and parcels of using list manipulation tools provided by Python
+# It employs codes from if statements and ends up having too much code.
+# Instead of trying to map out every possible situation, think about it like choosing the corresponding spot and changing it with the desired value.
+# The more clear form would be something like this:
+
+
+row1 = ["⬜️", "⬜️", "⬜️"]
+row2 = ["⬜️", "⬜️", "⬜️"]
+row3 = ["⬜️", "⬜️", "⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+
+columndigit = int(position[0])
+rowdigit = int(position[1])
+
+
+selectedrow = map[rowdigit - 1]
+selectedrow[columndigit - 1] = "X"
+
+
+print(f"{row1}\n{row2}\n{row3}")
