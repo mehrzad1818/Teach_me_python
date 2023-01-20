@@ -138,3 +138,12 @@ a = [-2, 1, 5, 3, 8, 5, 6]
 b = [1, 2, 5]
 c = [a[i] for i in b]
 print(c)
+
+# Code challenge 4.3 - Treasure Map Exercise
+
+row1 = ["⬜️", "⬜️", "⬜️"]
+row2 = ["⬜️", "⬜️", "⬜️"]
+row3 = ["⬜️", "⬜️", "⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
