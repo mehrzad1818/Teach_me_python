@@ -149,5 +149,28 @@ print(f"{row1}\n{row2}\n{row3}")
 position = input("Where do you want to put the treasure? ")
 
 stringed_position = (str(position))
-splited_position = stringed_position.split()
-print(splited_position)
+columndigit = int(stringed_position[0])
+rowdigit = int(stringed_position[1])
+
+if columndigit == 1 and rowdigit == 1:
+    row1[0] = "X"
+if columndigit == 2 and rowdigit == 1:
+    row1[1] = "X"
+if columndigit == 3 and rowdigit == 1:
+    row1[2] = "X"
+
+if columndigit == 1 and rowdigit == 2:
+    row2[0] = "X"
+if columndigit == 2 and rowdigit == 2:
+    row2[1] = "X"
+if columndigit == 3 and rowdigit == 2:
+    row2[2] = "X"
+
+if columndigit == 1 and rowdigit == 3:
+    row2[0] = "X"
+if columndigit == 2 and rowdigit == 3:
+    row2[1] = "X"
+if columndigit == 3 and rowdigit == 3:
+    row2[2] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
