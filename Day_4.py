@@ -218,7 +218,6 @@ print(f"{row1}\n{row2}\n{row3}")
 
 # Rock
 
-import random
 rock = """
     _______
 ---'   ____)
@@ -250,6 +249,7 @@ scissors = """
 ---.__(___)
 """
 
+
 print("Welcome to RPS game!")
 initial_input = input(
     "To begin, type 0 for rock, 1 for paper, or 2 for scissors.\n")
@@ -257,4 +257,26 @@ initial_input = input(
 human_input = int(initial_input)
 pc_random_input = random.randint(0, 2)
 
-compare = [human_input, pc_random_input]
+choices_list = [human_input, pc_random_input]
+shapes = [rock, paper, scissors]
+
+if choices_list[0] == choices_list[1]:
+    print(shapes[human_input])
+    print("Computer chose: \n")
+    print(shapes[pc_random_input])
+    print("It's a draw.")
+elif choices_list[0] > choices_list[1]:
+    print(shapes[human_input])
+    print("Computer chose: \n")
+    print(shapes[pc_random_input])
+    print("You win.")
+elif choices_list[1] > choices_list[0]:
+    print(shapes[human_input])
+    print("Computer chose: \n")
+    print(shapes[pc_random_input])
+    print("You lose.")
+else:
+    print(shapes[human_input])
+    print("Computer chose: \n")
+    print(shapes[pc_random_input])
+    print("You lost.")
