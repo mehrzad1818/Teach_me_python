@@ -14,7 +14,7 @@ print(a)
 # You say how? Let me show you."
 
 # "Imagine this is the module we've written on a separate file.
-
+#
 # pi = 3.14159265
 #
 # This is just the file.
@@ -210,8 +210,6 @@ position = input("Where do you want to put the treasure? ")
 columndigit = int(position[0])
 rowdigit = int(position[1])
 
-
-selectedrow = map[rowdigit - 1][columndigit - 1] = "X"
-
+map[rowdigit - 1][columndigit - 1] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
