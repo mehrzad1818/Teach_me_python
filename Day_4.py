@@ -213,3 +213,48 @@ rowdigit = int(position[1])
 map[rowdigit - 1][columndigit - 1] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
+
+# Rock Paper Scissors
+
+# Rock
+
+import random
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+# Paper
+
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+# Scissors
+
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+
+print("Welcome to RPS game!")
+initial_input = input(
+    "To begin, type 0 for rock, 1 for paper, or 2 for scissors.\n")
+
+human_input = int(initial_input)
+pc_random_input = random.randint(0, 2)
+
+compare = [human_input, pc_random_input]
