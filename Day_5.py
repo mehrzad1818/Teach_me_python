@@ -60,3 +60,18 @@ print(dividi)
 
 average = (round(summy) / round(dividi))
 print(average)
+
+# Day 5.2 Highest Score Exercise
+# "As the name suggests, we should return the highest value in a given list using for loops
+# unlike the previous code challenge which was about giving the average/mean of something, this one
+# stretches beyond that concept."
+
+
+student_scores = input("Input a list of students scores. \n").split()
+
+value = 0
+for student_score in range(0, len(student_scores)):
+    student_scores[student_score] = int(student_scores[student_score])
+    if value < student_scores[student_score]:
+        value = student_scores[student_score]
+print(f"The highest score in the class is: {value}")
