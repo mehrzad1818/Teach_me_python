@@ -135,3 +135,43 @@ for number in range(1, 101):
     if ((number % 2) == (0)):
         even_total += number
 print(even_total)
+
+# Final project for Day 5 is to make a PyPassword Generatr
+#"It's essentially a random number generator."
+
+# "
+# I'm going to ask the user for several inputs
+#
+# 1. How long do you want your password to be?
+# 2. What characters do you want to include?
+#
+# "
+
+passlength = input("Which letters do you want in your password?\n")
+
+
+list1 = []
+list1[:0] = passlength
+
+print(list1)
+
+
+# The code above shows how to do string slice
+
+
+nr_letters = int(input("How many letters do you want?\n"))
+nr_numbers = int(input("How many numbers do you wnat?\n"))
+nr_icons = int(input("How many icons do you want?\n"))
+
+letters_list = []
+numbers_list = []
+icons_list = []
+
+password = ""
+
+letters_list[:0] = "ZAQWSXCDERFVBGTYHNMJUIKLOPzaqwsxcderfvbgtyhnmjuiklop"
+numbers_list[:0] = "0321654987"
+icons_list[:0] = "!@#$%&*()"
+
+for letter in range(0, nr_letters):
+    letters_list[letter] = str(letters_list[letter])
