@@ -89,3 +89,49 @@ for score in student_scores:
     if score > highest_score:
         highest_score = score
 print(f"The highest score is: {highest_score}")
+
+# Now we're going to learn about 'Range' function and using it inside the for loop
+
+# "
+# for number in range(a, b):
+#   print(number)
+# "
+
+# Example
+for number in range(1, 11):
+    print(number)
+
+# You can use steps to modify the slope of change
+
+for number in range(1, 20, 2):
+    print(number)
+
+
+digit = 0
+for number in range(1, 101):
+    digit += number
+print(digit)
+
+# Day 5.3 Code challenge
+#"Adding evens exercise"
+
+# This is actually adding odds
+odd_total = 0
+for number in range(1, 101, 2):
+    odd_total += number
+print(odd_total)
+
+# For even we use this
+
+even_total = 0
+for number in range(0, 101, 2):
+    even_total += number
+print(even_total)
+
+# Without using step size option
+
+even_total = 0
+for number in range(1, 101):
+    if ((number % 2) == (0)):
+        even_total += number
+print(even_total)
