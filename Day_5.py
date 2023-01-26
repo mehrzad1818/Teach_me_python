@@ -171,7 +171,7 @@ password = ""
 
 letters_list[:0] = "ZAQWSXCDERFVBGTYHNMJUIKLOPzaqwsxcderfvbgtyhnmjuiklop"
 numbers_list[:0] = "0321654987"
-icons_list[:0] = "!@#$%&*()"
+icons_list[:0] = "!@#$%-+=&*()"
 
 for letter in range(0, nr_letters):
     letters_list[letter] = str(letters_list[letter])
