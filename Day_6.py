@@ -1,4 +1,3 @@
-
 # "This is the beginning of Day 6
 # We're going to learn about function, code blocks and while loop."
 
@@ -10,4 +9,14 @@ print("Hello")
 print(len("Hello"))
 print(len(str(2345698)))
 
-# Now, we are going to learn how to "define" our own functions: 
+# Now, we are going to learn how to "define" our own functions:
+
+
+def here_is_my_first_function():
+    print("Hey there!")
+    2 + 2
+    print("Are you fine?")
+    input("Answer the question above.\n")
+
+
+here_is_my_first_function()
