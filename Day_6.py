@@ -119,3 +119,9 @@ else:
 
 
 # Another version for the above part is something like this:
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
