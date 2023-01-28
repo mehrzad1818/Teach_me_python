@@ -1,3 +1,5 @@
+
+
 # "This is the beginning of Day 6
 # We're going to learn about function, code blocks and while loop."
 
@@ -25,6 +27,14 @@ here_is_my_first_function()
 
 
 # Most of the tasks and challenges of this Day are carried out in reeborg.ca website
+# Since some of the functions are defined by the website, I'll add constiuent to those objects and functions to disable the errors.
+turn_left = 1
+move = 2
+at_goal = 3
+wall_in_front = 4
+front_is_clear = 5
+wall_on_right = 6
+right_is_clear = 7
 
 # This is for hurdle 1 challenge using for loop at the end
 
@@ -150,23 +160,84 @@ def turn_right():
     turn_left()
     turn_left()
 
+
 def jump():
     turn_left()
-    
+
     while wall_on_right():
         move()
-        
+
     turn_right()
     move()
     turn_right()
-    
+
     while front_is_clear():
         move()
     turn_left()
+
 
 while not at_goal():
     if wall_in_front():
         jump()
     else:
         move()
-        
+
+# Final Project is to escape the maze
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+while not at_goal():
+    if front_is_clear():
+        move()
+    elif wall_in_front() and not wall_on_right():
+        turn_right()
+    elif wall_in_front() and wall_on_right():
+        turn_left()
+    elif not wall_in_front() and not wall_on_right():
+        turn_right()
+
+
+# Another version
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+while not at_goal():
+    if wall_in_front() and not wall_on_right():
+        turn_right()
+    elif wall_in_front() and wall_on_right():
+        turn_left()
+    elif wall_in_front() and not wall_on_right():
+        turn_right()
+    else:
+        move()
+
+
+
+# Another version just using while
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():
+    while wall_in_front() and wall_on_right():
+        turn_left()
+    while wall_in_front() and not wall_on_right():
+        turn_right()
+    while not wall_in_front() and not wall_on_right():
+        move()
+    while not wall_in_front() and wall_on_right():
+        move()
+
+# Note that the three version above are all somehow flawed.
+# When the robot is in the bottom half of the maze, it fails to find its goal.
