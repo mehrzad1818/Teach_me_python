@@ -241,3 +241,20 @@ while not at_goal():
 
 # Note that the three version above are all somehow flawed.
 # When the robot is in the bottom half of the maze, it fails to find its goal.
+
+# This version also suggest that the robot will have infinite loop when its in top left corner of the map
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
