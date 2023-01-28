@@ -108,17 +108,35 @@ def jump():
     turn_left()
 
 
-if not at_goal():
-    while not at_goal():
-        while front_is_clear() and not wall_in_front():
-            move()
-        while wall_in_front() and not front_is_clear():
-            jump()
-else:
-    at_goal()
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
 
 
-# Another version for the above part is something like this:
+# This is challenge for hurdle number 4
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    turn_left()
+    while front_is_clear() and not right_is_clear():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    while front_is_clear() and not right_is_clear():
+        move()
+    turn_left()
+#    while not front_is_clear():
+#        turn_left()
+
 
 while not at_goal():
     if wall_in_front():
