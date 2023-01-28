@@ -134,8 +134,6 @@ def jump():
     while front_is_clear() and not right_is_clear():
         move()
     turn_left()
-#    while not front_is_clear():
-#        turn_left()
 
 
 while not at_goal():
