@@ -16,3 +16,5 @@ word_list = ["ardvark", "baboon", "camel"]
 # letters in the chosen_word"
 
 for word in word_list(0, )
+
+Basically I don't know what to do and it's getting harder and harder each day.
