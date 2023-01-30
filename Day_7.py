@@ -17,4 +17,11 @@ word_list = ["ardvark", "baboon", "camel"]
 
 for word in word_list(0, )
 
+
+for word in word_list(0, )
+random_random.randint(1, 1000)
+
+chosen_word =
+
+
 Basically I don't know what to do and it's getting harder and harder each day.
