@@ -35,11 +35,19 @@ print(chosen_word)
 guess_letter = (str(input("Guess a letter: "))).lower()
 print(guess_letter)
 
+# here we want to find out whether the guessed letter is among the chosen word's letters
+
 chosenword_letters = []
 
 for each_letter in chosen_word:
     chosenword_letters.append(each_letter)
 
-
-chosenword_letters = chosen_word.split()
 print(chosenword_letters)
+
+# Here we want to make a loop to check one value (guessed letter) in the list (each letter).
+
+for checkletter in chosenword_letters:
+    if checkletter == guess_letter:
+        print("True")
+    else:
+        print("False")
