@@ -3,8 +3,7 @@
 
 # " So, the first step in making a working hangman is to
 #
-import random
-word_list = ["ardvark", "baboon", "camel"]
+
 
 # 1. Randomly choose a word from the given list
 # to a variable called something like chosen words."
@@ -15,13 +14,32 @@ word_list = ["ardvark", "baboon", "camel"]
 # "3. Check if the letter the user guessed is one of the
 # letters in the chosen_word"
 
-for word in word_list(0, )
+
+########################################################
+
+# First, we import packages
+
+import random
+
+# Below is our initial list
+
+word_list = ["ardvark", "baboon", "camel"]
+
+# We randomly choose a word from the list
+
+chosen_word = word_list[random.randint(0, len(word_list) - 1)]
+print(chosen_word)
+
+# We ask the user to input a letter and we make it lowercase.
+
+guess_letter = (str(input("Guess a letter: "))).lower()
+print(guess_letter)
+
+chosenword_letters = []
+
+for each_letter in chosen_word:
+    chosenword_letters.append(each_letter)
 
 
-for word in word_list(0, )
-random_random.randint(1, 1000)
-
-chosen_word =
-
-
-Basically I don't know what to do and it's getting harder and harder each day.
+chosenword_letters = chosen_word.split()
+print(chosenword_letters)
