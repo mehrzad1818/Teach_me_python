@@ -69,3 +69,5 @@ for revealletter in range():
         emptyspaces += "_"
 
 print(emptyspaces)
+
+"This part of the code needs to be revised"
