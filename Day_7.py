@@ -51,3 +51,12 @@ for checkletter in chosenword_letters:
         print("True")
     else:
         print("False")
+
+###########################
+
+emptyspaces = ""
+
+for dash in chosen_word:
+    emptyspaces += "_ "
+
+print(emptyspaces)
