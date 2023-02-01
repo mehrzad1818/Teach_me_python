@@ -62,7 +62,7 @@ for dash in chosen_word:
 print(emptyspaces)
 
 
-for revealletter in chosenword_letters:
+for revealletter in range():
     if guess_letter == checkletter:
         emptyspaces += guess_letter
     else:
