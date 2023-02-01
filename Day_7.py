@@ -54,9 +54,18 @@ for checkletter in chosenword_letters:
 
 ###########################
 
-emptyspaces = ""
+emptyspaces = []
 
 for dash in chosen_word:
-    emptyspaces += "_ "
+    emptyspaces.append("_")
+
+print(emptyspaces)
+
+
+for revealletter in chosenword_letters:
+    if guess_letter == checkletter:
+        emptyspaces += guess_letter
+    else:
+        emptyspaces += "_"
 
 print(emptyspaces)
