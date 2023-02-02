@@ -17,11 +17,9 @@
 
 ########################################################
 
-# First, we import packages
+
 
 import random
-
-# Below is our initial list
 
 word_list = ["ardvark", "baboon", "camel"]
 
@@ -30,12 +28,8 @@ word_list = ["ardvark", "baboon", "camel"]
 chosen_word = word_list[random.randint(0, len(word_list) - 1)]
 print(chosen_word)
 
-# We ask the user to input a letter and we make it lowercase.
-
 guess_letter = (str(input("Guess a letter: "))).lower()
-print(guess_letter)
 
-# here we want to find out whether the guessed letter is among the chosen word's letters
 
 chosenword_letters = []
 
@@ -44,15 +38,11 @@ for each_letter in chosen_word:
 
 print(chosenword_letters)
 
-# Here we want to make a loop to check one value (guessed letter) in the list (each letter).
-
 for checkletter in chosenword_letters:
     if checkletter == guess_letter:
         print("True")
     else:
         print("False")
-
-###########################
 
 emptyspaces = []
 
@@ -61,11 +51,12 @@ for dash in chosen_word:
 
 print(emptyspaces)
 
-
 for position in range(len(chosen_word)):
     letter = chosen_word[position]
     if letter == guess_letter:
         emptyspaces[position] = letter
 
-
 print(emptyspaces)
+
+
+winners_list = []
