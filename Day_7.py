@@ -14,51 +14,7 @@
 # "3. Check if the letter the user guessed is one of the
 # letters in the chosen_word"
 
-
-########################################################
-
-
 import random
-
-word_list = ["ardvark", "baboon", "camel"]
-
-# We randomly choose a word from the list
-
-chosen_word = word_list[random.randint(0, len(word_list) - 1)]
-print(chosen_word)
-
-guess_letter = (str(input("Guess a letter: "))).lower()
-
-
-chosenword_letters = []
-
-for each_letter in chosen_word:
-    chosenword_letters.append(each_letter)
-
-
-for checkletter in chosenword_letters:
-    if checkletter == guess_letter:
-        print("True")
-    else:
-        print("False")
-
-emptyspaces = []
-
-for dash in chosen_word:
-    emptyspaces.append("_")
-
-"*************************"
-while not emptyspaces == chosenword_letters:
-
-    for position in range(len(chosen_word)):
-        letter = chosen_word[position]
-        #print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
-        if letter == guess_letter:
-            emptyspaces[position] = letter
-    print(emptyspaces)
-    guess_letter = (str(input("Guess a letter: "))).lower()
-
-
 HANGMANPICS = ['''
   +---+
   |   |
@@ -109,3 +65,49 @@ HANGMANPICS = ['''
  / \  |
       |
 =========''']
+
+########################################################
+
+
+word_list = ["ardvark", "baboon", "camel"]
+
+# We randomly choose a word from the list
+
+chosen_word = word_list[random.randint(0, len(word_list) - 1)]
+print(chosen_word)
+
+guess_letter = (str(input("Guess a letter: "))).lower()
+
+
+chosenword_letters = []
+
+for each_letter in chosen_word:
+    chosenword_letters.append(each_letter)
+
+
+for checkletter in chosenword_letters:
+    if checkletter == guess_letter:
+        print("True")
+    else:
+        print("False")
+
+emptyspaces = []
+
+for dash in chosen_word:
+    emptyspaces.append("_")
+
+lives = 6
+
+"*************************"
+while not lives != 0:
+
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        #print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
+        if letter == guess_letter:
+            emptyspaces[position] = letter
+        elif letter != guess_letter:
+            lives -= 1
+    print(emptyspaces)
+guess_letter = (str(input("Guess a letter: "))).lower()
+
