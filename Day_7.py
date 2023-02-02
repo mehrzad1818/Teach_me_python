@@ -63,10 +63,9 @@ print(emptyspaces)
 
 
 for position in range(len(chosen_word)):
-    guess_letter = chosen_word[position]
-    if guess_letter == checkletter:
-        emptyspaces += guess_letter
-    else:
-        emptyspaces += "_"
+    letter = chosen_word[position]
+    if letter == guess_letter:
+        emptyspaces[position] = letter
+
 
 print(emptyspaces)
