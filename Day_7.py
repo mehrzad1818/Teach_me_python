@@ -18,7 +18,6 @@
 ########################################################
 
 
-
 import random
 
 word_list = ["ardvark", "baboon", "camel"]
@@ -36,7 +35,6 @@ chosenword_letters = []
 for each_letter in chosen_word:
     chosenword_letters.append(each_letter)
 
-print(chosenword_letters)
 
 for checkletter in chosenword_letters:
     if checkletter == guess_letter:
@@ -49,14 +47,13 @@ emptyspaces = []
 for dash in chosen_word:
     emptyspaces.append("_")
 
-print(emptyspaces)
+"*************************"
+while not emptyspaces == chosenword_letters:
 
-for position in range(len(chosen_word)):
-    letter = chosen_word[position]
-    if letter == guess_letter:
-        emptyspaces[position] = letter
-
-print(emptyspaces)
-
-
-winners_list = []
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        #print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
+        if letter == guess_letter:
+            emptyspaces[position] = letter
+    print(emptyspaces)
+    guess_letter = (str(input("Guess a letter: "))).lower()
