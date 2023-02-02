@@ -62,12 +62,11 @@ for dash in chosen_word:
 print(emptyspaces)
 
 
-for revealletter in range():
+for position in range(len(chosen_word)):
+    guess_letter = chosen_word[position]
     if guess_letter == checkletter:
         emptyspaces += guess_letter
     else:
         emptyspaces += "_"
 
 print(emptyspaces)
-
-"This part of the code needs to be revised"
