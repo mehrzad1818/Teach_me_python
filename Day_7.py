@@ -111,3 +111,4 @@ while not lives != 0:
     print(emptyspaces)
 guess_letter = (str(input("Guess a letter: "))).lower()
 
+# This project is postponed until further updates.
