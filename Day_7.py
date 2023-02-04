@@ -15,7 +15,7 @@
 # letters in the chosen_word"
 
 import random
-HANGMANPICS = reversed(['''
+HANGMANPICS = ['''
   +---+
   |   |
       |
@@ -64,7 +64,7 @@ HANGMANPICS = reversed(['''
  /|\  |
  / \  |
       |
-========='''])
+=========''']
 
 ########################################################
 
@@ -109,8 +109,7 @@ while lives != 0:
     if letter != guess_letter:
         lives -= 1
         print(emptyspaces)
-        for ascii in HANGMANPICS[lives]:
-            print(ascii)
+        print(HANGMANPICS[lives])
         guess_letter = (str(input("Guess a letter: "))).lower()
 
 print("You lose")
