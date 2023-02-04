@@ -106,8 +106,8 @@ while not lives != 0:
         # print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
         if letter == guess_letter:
             emptyspaces[position] = letter
-        elif letter != guess_letter:
-            lives -= 1
+    if letter != guess_letter:
+        lives -= 1
     print(emptyspaces)
 guess_letter = (str(input("Guess a letter: "))).lower()
 
