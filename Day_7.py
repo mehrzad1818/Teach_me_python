@@ -103,7 +103,7 @@ while not lives != 0:
 
     for position in range(len(chosen_word)):
         letter = chosen_word[position]
-        #print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
+        # print(f"Current position: {position}\nCurrent letter: {letter}\nGuessed letter: {guess_letter}")
         if letter == guess_letter:
             emptyspaces[position] = letter
         elif letter != guess_letter:
@@ -111,4 +111,4 @@ while not lives != 0:
     print(emptyspaces)
 guess_letter = (str(input("Guess a letter: "))).lower()
 
-# This project is postponed until further updates.
+print("You lose")
