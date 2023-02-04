@@ -99,7 +99,7 @@ for dash in chosen_word:
 lives = 6
 
 "*************************"
-while not lives != 0:
+while lives != 0:
 
     for position in range(len(chosen_word)):
         letter = chosen_word[position]
@@ -108,7 +108,9 @@ while not lives != 0:
             emptyspaces[position] = letter
     if letter != guess_letter:
         lives -= 1
-    print(emptyspaces)
-guess_letter = (str(input("Guess a letter: "))).lower()
+        print(emptyspaces)
+        for ascii in (HANGMANPICS):
+            print(ascii)
+        guess_letter = (str(input("Guess a letter: "))).lower()
 
 print("You lose")
