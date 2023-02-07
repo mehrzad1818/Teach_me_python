@@ -61,3 +61,19 @@ location = input("Where are you from? ")
 def greet_with(name, location):
     print(f"Hello, {name}")
     print(f"What is it like in {location}?")
+
+
+greet_with()
+
+# "If we change the position of arguments above, the result wil also changes.
+# This shows that the result is codependent on its position, that's why its called positional argument."
+
+
+# On the contrary, we have keyword arguments, which deals with the parameters independent of its position.
+
+def greet_with(name, location):
+    print(f"Hello, {name}")
+    print(f"What is it like in {location}?")
+
+
+greet_with(location = "London", name = "James")
