@@ -13,7 +13,7 @@
 
 # "3. Check if the letter the user guessed is one of the
 # letters in the chosen_word"
-
+from replit import clear
 import random
 HANGMANPICS = ['''
   +---+
@@ -78,6 +78,7 @@ print(chosen_word)
 
 guess_letter = (str(input("Guess a letter: "))).lower()
 
+clear()
 
 chosenword_letters = []
 
@@ -111,5 +112,7 @@ while lives != 0:
         print(emptyspaces)
         print(HANGMANPICS[lives])
         guess_letter = (str(input("Guess a letter: "))).lower()
+        clear()
 
 print("You lose")
+
