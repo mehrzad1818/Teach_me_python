@@ -76,4 +76,17 @@ def greet_with(name, location):
     print(f"What is it like in {location}?")
 
 
-greet_with(location = "London", name = "James")
+greet_with(location="London", name="James")
+
+
+# Day 8.1 Challenge: Area Calculation
+
+def paint_calc(height, width, cover):
+    area = (height * width) / (coverage)
+    print(area)
+
+
+test_h=int(input("Height of wall: "))
+test_w=int(input("Width of wall: "))
+coverage=5
+paint_calc(height = test_h, width = test_h, cover = coverage)
