@@ -14,4 +14,14 @@ def greet():
     print("Welcome to your program.")
     print("I hope you enjoy your stay.")
 
+
 greet()
+
+# So, to make functions with input capability, we need to add arguments into parantheses.
+# Like this:
+
+# def my_function(blah blah blah blah):
+#     # Do this
+#     # Do that
+#     # Then do this and this
+#     # Done
