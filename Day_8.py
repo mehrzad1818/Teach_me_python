@@ -9,6 +9,9 @@
 #     # Then do this and this
 #     # Done
 
+from math import sqrt
+
+
 def greet():
     print("Hello,")
     print("Welcome to your program.")
@@ -82,11 +85,37 @@ greet_with(location="London", name="James")
 # Day 8.1 Challenge: Area Calculation
 
 def paint_calc(height, width, cover):
-    area = round(height * width) / (coverage)
-    print(area)
+    area = (height * width) / (coverage)
+    rounded_area = round(area, 0)
+    if rounded_area <= 1:
+        print(f"You'll need {rounded_area} can of paint.")
+    else:
+        print(f"You'll need {rounded_area} cans of paint.")
 
 
-test_h=int(input("Height of wall: "))
-test_w=int(input("Width of wall: "))
-coverage=5
-paint_calc(height = test_h, width = test_w, cover = coverage)
+test_h = float(input("Height of wall: "))
+test_w = float(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+# This part deals with challenge of making a prime nunmber calculator which
+# is used in a variety of things, like encryption, bitcoin, and animals.
+
+factors = ()
+
+
+def prime_checker(number):
+
+    if (number <= 1):
+        return False
+
+    for spectrum in range(2, round(sqrt(n))):
+        numb = (((n % spectrum)) == 0)
+        if numb is True:
+            print(f"{number} is not a prime number.")
+        else:
+            print(f"{number} is not a prime number.")
+
+
+n = int(input("Check this number: "))
+prime_checker(number=n)
