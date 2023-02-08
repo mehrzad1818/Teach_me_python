@@ -106,12 +106,8 @@ factors = ()
 
 def prime_checker(number):
 
-    if (number <= 1):
-        return False
-
     for spectrum in range(2, round(sqrt(n))):
-        numb = (((n % spectrum)) == 0)
-        if numb is True:
+        if (((n % spectrum)) == 0):
             print(f"{number} is not a prime number.")
         else:
             print(f"{number} is not a prime number.")
