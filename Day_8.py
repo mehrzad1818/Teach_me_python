@@ -138,15 +138,17 @@ def encrypt(text, shift):
     ciphered_text = []
     for letter in text:
         ciphered_text.append(alphabet[alphabet.index(letter) + shift])
-    print(ciphered_text)
+    print(''.join(map(str, ciphered_text)))
 
 
 def decrypt(text, shift):
     deciphered_text = []
     for letter in text:
         deciphered_text.append(alphabet[alphabet.index(letter) - shift])
-    print(deciphered_text)
+    print(''.join(map(str, deciphered_text)))
 
 
-encrypt(text, shift)
-decrypt(text, shift)
+if direction == "encode":
+    encrypt(text, shift)
+elif direction == "decode":
+    decrypt(text, shift)
