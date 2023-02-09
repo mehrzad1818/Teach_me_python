@@ -119,14 +119,13 @@ prime_checker(number=n)
 
 # This challenge is Ceasar Cipher
 
-
 # This is alphabet
 
 def split(alphabet):
     return list(alphabet)
 
 
-alphabet = (split('abcdefghijklmnopqrstuvwxyz'))
+alphabet = (split('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'))
 print(alphabet)
 
 
