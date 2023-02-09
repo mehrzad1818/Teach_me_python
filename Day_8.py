@@ -166,17 +166,19 @@ def split(alphabet):
 alphabet = (split('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'))
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+shift = ((int(input("Type the shift number:\n"))) % 26)
 
 
 def ceasar(text, shift, direction):
-
     message = []
     if direction == "decode":
         shift *= -1
     for letter in text:
-        message.append(alphabet[alphabet.index(letter) + shift])
-    print(f"The {direction} text is {(''.join(map(str, message)))}.")
+        if letter not in alphabet:
+            message.append(letter)
+        else:
+            message.append(alphabet[alphabet.index(letter) + shift])
+    print(f"The {direction} text is {(''.join(map(str, message)))}.\n")
 
 
 ceasar(text, shift, direction)
