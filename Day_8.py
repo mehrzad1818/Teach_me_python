@@ -21,4 +21,12 @@ def encrypt(text, shift):
     print(ciphered_text)
 
 
+def decrypt(text, shift):
+    ciphered_text = []
+    for letter in text:
+        ciphered_text.append(alphabet[alphabet.index(letter) - shift])
+    print(ciphered_text)
+
+
 encrypt(text, shift)
+decrypt(text, shift)
