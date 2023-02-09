@@ -159,16 +159,6 @@ elif direction == "decode":
 # This is alphabet
 
 
-def split(alphabet):
-    return list(alphabet)
-
-
-alphabet = (split('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'))
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = ((int(input("Type the shift number:\n"))) % 26)
-
-
 def ceasar(text, shift, direction):
     message = []
     if direction == "decode":
@@ -181,4 +171,25 @@ def ceasar(text, shift, direction):
     print(f"The {direction} text is {(''.join(map(str, message)))}.\n")
 
 
-ceasar(text, shift, direction)
+restart = True
+
+while restart:
+    def split(alphabet):
+        return list(alphabet)
+
+    alphabet = (split('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'))
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = ((int(input("Type the shift number:\n"))) % 26)
+
+    ceasar(text, shift, direction)
+    restartprompt = input(
+        "Do you want to restart the program? Type 'yes' or 'no'.")
+
+    if restartprompt == "no":
+        restart = False
+        print("Thanks for using the app.")
+    elif restartprompt == "yes":
+        restart = True
+    else:
+        print("Wrong Input. Manually restart the program.")
