@@ -152,3 +152,39 @@ if direction == "encode":
     encrypt(text, shift)
 elif direction == "decode":
     decrypt(text, shift)
+
+
+# A more efficient format with both fucntions combined into one is like this:
+
+
+def split(alphabet):
+    return list(alphabet)
+
+
+alphabet = (split('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'))
+print(alphabet)
+
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+def ceasar(text, shift):
+
+    message = []
+
+    if direction == "encode":
+        for letter in text:
+            message.append(alphabet[alphabet.index(letter) + shift])
+        print(f"The encrypted text is {(''.join(map(str, message)))}.")
+    elif direction == "decode":
+        for letter in text:
+            message.append(alphabet[alphabet.index(letter) - shift])
+        print(f"The decrypted text is {(''.join(map(str, message)))}.")
+
+
+if direction == "encode":
+    ceasar(text, shift)
+elif direction == "decode":
+    ceasar(text, shift)
