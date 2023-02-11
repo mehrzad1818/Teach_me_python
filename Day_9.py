@@ -101,6 +101,7 @@ for students in student_scores:
 
 print(student_grades)
 
+
 # The new concept is called 'Nesting':
 # If we think about a dictionaries as a list of things; in nesting, we can put a dictionary inside another dictionary.
 # That's basically nesting.
@@ -123,8 +124,19 @@ capitals = {
 }
 
 travel_log = {
-    "France": ["Paris", "Lille", "Dijon"],
-    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+
+    "France":
+
+    {"cities_visited": ["Paris", "Lille", "Dijon"],
+     "number_of_visits": 4,
+     "overalltripscore": [67, 80, 75, 100]},
+
+    "Germany":
+
+    {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+     "number_of_visits": 2,
+     "overalltripscore": [50, 35]},
+
 }
 
 #  In the example above,
