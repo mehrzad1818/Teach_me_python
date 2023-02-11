@@ -29,7 +29,7 @@ print(programming_dictionary["Bug"])
 
 # Here's how we add items to the dictionary
 
-programming_dictionary["Parameter"] = "The values inside the actual implementation of the function."]
+programming_dictionary["Parameter"] = "The values inside the actual implementation of the function."
 
 print(programming_dictionary)
 
@@ -46,6 +46,57 @@ programming_dictionary = {}
 print(programming_dictionary)
 
 # The concept of tapping into a dictionary goes beyond just adding
-# We can easily add many things to our dictionary
+# We can easily edit things in our dictionary.
 
 programming_dictionary["Bug"] = "It's a very bad thing, you should avoid it."
+print(programming_dictionary)
+
+
+# This is how we 'loop through' a dictionary:
+
+for key in programming_dictionary:
+    print(key)
+
+# The code above just gives us the keys and not the values
+# We can have both with the code below:
+
+for keysnvalues in programming_dictionary:
+    print(keysnvalues)
+    print(programming_dictionary[keysnvalues])
+
+
+# This is Day 9.1 Grading Program Exercise - Our first code challenge of the day.
+
+# "So, here's the rubric:
+
+# from 91 to 100 -- outstanding
+# from 81 to 90 -- exceeds expectation
+# from 71 to 80 -- acceptable
+# from 70 below -- fail
+
+
+student_scores = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62,
+
+}
+
+student_grades = {}
+
+
+for students in student_scores:
+    grades = student_scores[students]
+    if grades <= 70:
+        student_grades[students] = "Fail"
+    if 71 <= grades <= 80:
+        student_grades[students] = "Acceptable"
+    if 81 <= grades <= 90:
+        student_grades[students] = "Exceeds Expectations"
+    if 91 <= grades <= 100:
+        student_grades[students] = "Outstanding"
+
+
+print(student_grades)
