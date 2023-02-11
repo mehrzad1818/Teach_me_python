@@ -100,3 +100,34 @@ for students in student_scores:
 
 
 print(student_grades)
+
+# The new concept is called 'Nesting':
+# If we think about a dictionaries as a list of things; in nesting, we can put a dictionary inside another dictionary.
+# That's basically nesting.
+
+# {
+#     key1: [mylist]
+#     key2: {mydic}
+# }
+
+# In the example above, we have a list and a dictionary nested inside another dictionary.
+
+# Some examples are down below:
+
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin",
+    "Poland": "Warsaw",
+    "Finland": "Helsinki",
+
+}
+
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+}
+
+#  In the example above,
+# We have a key above in the travel log dic which is france,
+# but as value for the key we don't have a string, but a list,
+# which has its own values.
