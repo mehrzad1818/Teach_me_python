@@ -178,3 +178,14 @@ def add_new_country(destination, visits, viscity):
 add_new_country("Russia", 2, ["Moscow", "Saint Petersburg", "Dontesk"])
 print(travel_log)
 
+
+# This is the final project which is Blind Auction:
+
+name = input(str("What is your name?: "))
+bid = input(int("What's your bid? $"))
+other_participant = input(
+    str("Are there any other bidders? Type 'yes' or 'no'."))
+
+auction = []
+bidder = {name: bid}
+auction.append(bidder)
