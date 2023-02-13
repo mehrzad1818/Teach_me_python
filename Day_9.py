@@ -177,3 +177,4 @@ def add_new_country(destination, visits, viscity):
 
 add_new_country("Russia", 2, ["Moscow", "Saint Petersburg", "Dontesk"])
 print(travel_log)
+
