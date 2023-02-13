@@ -123,21 +123,23 @@ capitals = {
 
 }
 
-travel_log = {
+travel_log = [
 
-    "France":
+    {
+        "country": "France",
 
-    {"cities_visited": ["Paris", "Lille", "Dijon"],
-     "number_of_visits": 4,
-     "overalltripscore": [67, 80, 75, 100]},
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "number_of_visits": 4,
+        "overalltripscore": [67, 80, 75, 100]
+    },
+    {
+        "country": "Germany",
 
-    "Germany":
-
-    {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
-     "number_of_visits": 2,
-     "overalltripscore": [50, 35]},
-
-}
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "number_of_visits": 2,
+        "overalltripscore": [50, 35]
+    },
+]
 
 #  In the example above,
 # We have a key above in the travel log dic which is france,
