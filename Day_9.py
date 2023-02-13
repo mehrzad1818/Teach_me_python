@@ -145,3 +145,35 @@ travel_log = [
 # We have a key above in the travel log dic which is france,
 # but as value for the key we don't have a string, but a list,
 # which has its own values.
+
+
+# This is Day 2 Dictionary List Exercise
+
+travel_log = [
+
+    {
+        "country": "France",
+
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "number_of_visits": 4,
+        "overalltripscore": [67, 80, 75, 100]
+    },
+    {
+        "country": "Germany",
+
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "number_of_visits": 2,
+        "overalltripscore": [50, 35]
+    },
+]
+
+
+def add_new_country(destination, visits, viscity):
+    travel_logger = {"country": [destination],
+                     "cities_visited": [viscity],
+                     "number_of_visits": [visits]}
+    travel_log.append(travel_logger)
+
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg", "Dontesk"])
+print(travel_log)
