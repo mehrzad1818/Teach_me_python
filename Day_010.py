@@ -15,3 +15,17 @@
 #     then do this to something
 #     then do that
 #     dinally, do this
+
+# This type actually has an output:
+
+# def my_function():
+#     result = 3 * 2
+#     return result
+
+# The code above can be written again like this:
+
+# def my_function():
+#     return = 3 * 2
+
+
+# Here's the exercises for functions with outputs:
