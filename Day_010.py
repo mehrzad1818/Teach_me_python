@@ -29,3 +29,7 @@
 
 
 # Here's the exercises for functions with outputs:
+
+def format_name(first_name, last_name):
+    first_case = first_name.title()
+    last_case = last_name.title()
