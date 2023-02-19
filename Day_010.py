@@ -1,28 +1,17 @@
-# This file contains codes from the first hundred days of Python.
-# Up to this point, 10 percent of the videos have been watched. Despite the 90 percent resting ahead, I guess I've made it far enough. 
-# This is the final project which is Blind Auction:
-other = True
-while other == True:
-    name = str(input("What is your name? "))
-    bid = int(input("What's your bid? $"))
-    other_participant = input(
-        str("Are there any other bidders? Type 'yes' or 'no'."))
+# This is day 10, and it's about "Functions with Outputs"
 
-    if other_participant == "yes":
-        other == True
-    if other_participant == "no":
-        other == False
+# This was the simplest form of a function that we learnt how to make.
 
+# def my_function():
+#     Do this
+#     Then do this
+#     Then do that
+#     Finally, do this
 
-auction = []
-bidder = {name: bid}
-auction.append(bidder)
+# This type of function actually took something is the input:
 
-bidprice = 0
-
-for candidate in auction:
-
-    if bid > bidprice:
-        bidprice == bid
-
-print(f"The winnder is {auction[name]} with bid of {bid}$")
+# def my_function(something):
+#     Do this
+#     then do this to something
+#     then do that
+#     dinally, do this
