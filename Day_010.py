@@ -33,3 +33,7 @@
 def format_name(first_name, last_name):
     first_case = first_name.title()
     last_case = last_name.title()
+    return f"{first_case}, {last_case}"
+
+
+print(format_name("JimMY", "CaRTEr"))
