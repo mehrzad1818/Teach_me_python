@@ -45,13 +45,13 @@ def is_leap(year):
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:
-                return True
+                print("Leap year.")
             else:
-                return False
+                print("Not leap year.")
         else:
-            return True
+            print("Leap year")
     else:
-        return False
+        print("Now leap year.")
 
 
 def days_in_month():
@@ -62,4 +62,3 @@ year = int(input("Enter a year: "))
 month = int(input("Enter a month: "))
 days = days_in_month(year, month)
 print(days)
-
