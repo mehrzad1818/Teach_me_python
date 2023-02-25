@@ -31,15 +31,18 @@
 # Here's the exercises for functions with outputs:
 
 def format_name(first_name, last_name):
+    if first_name == "" or last_name == "":
+        return
     first_case = first_name.title()
     last_case = last_name.title()
     return f"{first_case}, {last_case}"
 
 
-print(format_name("JimMY", "CaRTEr"))
-
+print(format_name(input("What is your first name? "),
+      input("What is your last name? ")))
 
 # This coding challenge deals with modifing the leap year calculator we did before, this is challenge 10.1:
+
 
 def is_leap(year):
     if year % 4 == 0:
