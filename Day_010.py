@@ -32,7 +32,7 @@
 
 def format_name(first_name, last_name):
     if first_name == "" or last_name == "":
-        return
+        return "You didn't provide a valid input."
     first_case = first_name.title()
     last_case = last_name.title()
     return f"{first_case}, {last_case}"
