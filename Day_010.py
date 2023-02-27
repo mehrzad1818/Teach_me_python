@@ -101,6 +101,21 @@ def format_name(f_name, l_name):
 # Take a look at this example:
 # Calculator
 
+logo = """
+___________
+| ________ |
+||12345678||
+|__________|
+|[M|#|C][-]|
+|[7|8|9][+]|
+|[4|5|6][x]|
+|[1|2|3][%]|
+|[.|O|:][=]|
+"----------
+
+"""
+
+
 def add(n1, n2):
     return n1 + n2
 
@@ -126,7 +141,7 @@ operations = {
 
 
 def calculator():
-
+    print(logo)
     num1 = int(input("What's the first number? "))
     for symbol in operations:
         print(symbol)
@@ -149,6 +164,7 @@ def calculator():
             num1 = answer
         elif contin == "n":
             continue_calculation == False
+            calculator()
 
 
 # One concept in programming is called "Recursion":
