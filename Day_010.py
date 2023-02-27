@@ -124,25 +124,33 @@ operations = {
     "/": divide
 }
 
-num1 = int(input("What's the first number? "))
-for symbol in operations:
-    print(symbol)
 
-continue_calculation = True
+def calculator():
 
-while continue_calculation:
+    num1 = int(input("What's the first number? "))
+    for symbol in operations:
+        print(symbol)
 
-    operation_symbol = input("Pick an operation from the line above: ")
-    num2 = int(input("What's the second number? "))
+    continue_calculation = True
 
-    calculation_function = operations[operation_symbol]
-    answer = calculation_function(num1, num2)
+    while continue_calculation:
 
-    print(f"{num1} {operation_symbol} {num2} = {answer}")
+        operation_symbol = input("Pick an operation: ")
+        num2 = int(input("What's the next number? "))
 
-    contin = input(
-        f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ")
-    if contin == "y":
-        continue_calculation == True
-    elif contin == "n":
-        continue_calculation == False
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
+
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+        contin = input(
+            f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ")
+        if contin == "y":
+            num1 = answer
+        elif contin == "n":
+            continue_calculation == False
+
+
+# One concept in programming is called "Recursion":
+# in recursion, we basically put a whole programs inside a function
+# without inputs and outputs, so that it can be called later for restart
