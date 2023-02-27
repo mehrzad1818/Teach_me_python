@@ -134,9 +134,18 @@ first_answer = calculation_function(num1, num2)
 
 print(f"{num1} {operation_symbol} {num2} = {first_answer}")
 
-operation_symbol = input("Pick another operation from the line above: ")
-num3 = int(input("What's the second number? "))
-calculation_function = operations[operation_symbol]
-second_answer = calculation_function(calculation_function(num1, num2), num3)
+continue_calculation = True
 
-print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
+while continue_calculation:
+
+    operation_symbol = input("Pick another operation from the line above: ")
+    num3 = int(input("What's the second number? "))
+    calculation_function = operations[operation_symbol]
+    second_answer = calculation_function(
+        calculation_function(num1, num2), num3)
+
+    print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
+    contin = input(
+        "Type 'y' to continue calculating with {second_answer}, or type 'n' to exit: ")
+    if contin == "y":
+        return continue_calculation == True
