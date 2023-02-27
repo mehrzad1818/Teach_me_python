@@ -131,8 +131,10 @@ for symbol in operations:
 continue_calculation = True
 
 while continue_calculation:
+
     operation_symbol = input("Pick an operation from the line above: ")
     num2 = int(input("What's the second number? "))
+
     calculation_function = operations[operation_symbol]
     answer = calculation_function(num1, num2)
 
