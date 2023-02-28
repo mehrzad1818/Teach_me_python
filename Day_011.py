@@ -4,8 +4,8 @@ import random
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-playercard = cards(len(random.randint))
-cpucard = cards(len(random.randint))
+playercard = cards[random.randint(0, 12)]
+cpucard = cards[random.randint(0, 12)]
 
 
 print(cpucard)
