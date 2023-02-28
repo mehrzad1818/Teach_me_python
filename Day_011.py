@@ -9,3 +9,5 @@ cpucard = cards[random.randint(0, 12)]
 
 
 print(cpucard)
+
+# Some aspects of the code are latenet at this point
