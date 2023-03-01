@@ -8,6 +8,6 @@ playercard = cards[random.randint(0, 12)]
 cpucard = cards[random.randint(0, 12)]
 
 
-print(cpucard)
-
-# Some aspects of the code are latenet at this point
+playercard2list = []
+cpucard2list
+playercard2 = playercard.append()
