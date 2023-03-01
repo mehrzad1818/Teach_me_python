@@ -4,10 +4,19 @@ import random
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-playercard = cards[random.randint(0, 12)]
-cpucard = cards[random.randint(0, 12)]
 
-
-playercard2list = []
-cpucard2list
 playercard2 = playercard.append()
+cpucard2 =
+
+
+# lists  to show
+playercard2list = []
+playercard2list = []
+
+def picker():
+
+    playercard = cards[random.randint(0, 12)]
+    cpucard = cards[random.randint(0, 12)]
+
+
+
