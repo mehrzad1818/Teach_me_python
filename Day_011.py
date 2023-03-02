@@ -19,3 +19,9 @@ def picker():
 
         playercard2list = []
         cpucard2list = []
+
+        print(playercard2list)
+        print(cpucard2list)
+
+
+picker()
