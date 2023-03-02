@@ -18,12 +18,14 @@ def picker():
 
     playercardlist.append(playercard)
     playercardlist.append(playercard2)
+
     print(playercardlist)
 
     cpucardlist = []
 
     cpucardlist.append(cpucard)
     cpucardlist.append(cpucard2)
+
     print(cpucardlist)
 
 
