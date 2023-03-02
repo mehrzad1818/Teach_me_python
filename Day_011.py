@@ -8,20 +8,16 @@ import random
 def picker():
 
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    playercard = cards[random.randint(0, 12)]
+    cpucard = cards[random.randint(0, 12)]
 
-    for item in playercard:
+    playercard2list = []
+    playercard2list.append(playercard)
+    print(playercard2list)
 
-        playercard2list.append(playercard)
-        cpucard2list.append(cpucard)
-
-        playercard = cards[random.randint(0, 12)]
-        cpucard = cards[random.randint(0, 12)]
-
-        playercard2list = []
-        cpucard2list = []
-
-        print(playercard2list)
-        print(cpucard2list)
+    cpucard2list = []
+    cpucard2list.append(cpucard)
+    print(cpucard2list)
 
 
 picker()
