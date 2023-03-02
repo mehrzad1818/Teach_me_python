@@ -2,11 +2,6 @@
 # Your very first capstone project
 import random
 
-
-playercard2 = playercard.append()
-cpucard2 =
-
-
 # lists  to show
 
 
@@ -24,6 +19,3 @@ def picker():
 
         playercard2list = []
         cpucard2list = []
-
-
-print(cpucard2list)
