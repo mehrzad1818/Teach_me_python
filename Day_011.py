@@ -42,10 +42,12 @@ if playing_consent == "y":
         cpucardlist = []
 
         cpucardlist.append(cpucard)
-        # cpucardlist.append(cpucard2)
 
         print(
-            f"The dealer's cards are {cpucardlist}.")
+            f"The dealer's first card is {cpucardlist}.")
+
+    picker()
+
 elif playing_consent == "n":
 
     print(blackjacklogo)
@@ -57,4 +59,3 @@ elif playing_consent == "n":
 else:
     print(blackjacklogo)
     print("Restart the program and check your input.")
-picker()
