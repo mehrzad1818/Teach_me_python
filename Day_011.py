@@ -2,11 +2,25 @@
 # Your very first capstone project
 import random
 
+blackjacklogo = """
+
+  ____  _            _        _            _
+ |  _ \| |          | |      | |          | |
+ | |_) | | __ _  ___| | __   | | __ _  ___| | __
+ |  _ <| |/ _` |/ __| |/ /   | |/ _` |/ __| |/ /
+ | |_) | | (_| | (__|   < |__| | (_| | (__|   <
+ |____/|_|\__,_|\___|_|\_\____/ \__,_|\___|_|\_\
+
+
+"""
+
 # lists  to show
 playing_consent = input(
     str("Do you want to play a game of Blackjack? Type 'y' or 'n': "))
 
 if playing_consent == "y":
+
+    print(blackjacklogo)
 
     def picker():
 
@@ -28,10 +42,19 @@ if playing_consent == "y":
         cpucardlist = []
 
         cpucardlist.append(cpucard)
-        cpucardlist.append(cpucard2)
+        # cpucardlist.append(cpucard2)
 
         print(
-            f"The dealer's cards are {cpucardlist}. The total is {cpucard + cpucard2}.")
+            f"The dealer's cards are {cpucardlist}.")
+elif playing_consent == "n":
 
+    print(blackjacklogo)
 
+    print("""
+    Do you got the gots to play?
+    Or you need more time to grow it?
+    """)
+else:
+    print(blackjacklogo)
+    print("Restart the program and check your input.")
 picker()
