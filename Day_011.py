@@ -51,11 +51,14 @@ if playing_consent == "y":
 
         if second_consent == "y":
             playercard3 = cards[random.randint(0, 12)]
+            cpucard3 = cards[random.randint(0, 12)]
             playercardlist.append(playercard3)
             cpucardlist.append(cpucard2)
+            cpucardlist.append(cpucard3)
             print(f"The dealer's total card is {cpucard + cpucard2}.")
             print(
                 f"Your total card is {playercard + playercard2 + playercard3}.")
+
     picker()
 
 elif playing_consent == "n":
