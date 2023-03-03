@@ -55,10 +55,18 @@ if playing_consent == "y":
             playercardlist.append(playercard3)
             cpucardlist.append(cpucard2)
             cpucardlist.append(cpucard3)
-            print(f"The dealer's total card is {cpucard + cpucard2}.")
+            print(
+                f"The dealer's total card is {cpucard + cpucard2 + cpucard3}.")
             print(
                 f"Your total card is {playercard + playercard2 + playercard3}.")
-
+        if (playercard + playercard2) > 21:
+            print("You've lost.")
+        elif (playercard + playercard2) == 21:
+            print("You've won.")
+        elif ((playercard + playercard2 + playercard3) > 21 and (playercard + playercard2 + playercard3) > (cpucard + cpucard2 + cpucard3)):
+            print("You've lost.")
+        else:
+            print("You won.")
     picker()
 
 elif playing_consent == "n":
