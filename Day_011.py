@@ -46,6 +46,16 @@ if playing_consent == "y":
         print(
             f"The dealer's first card is {cpucardlist}.")
 
+        second_consent = input(
+            str("Type 'y' to get another card, type 'n' to pass: "))
+
+        if second_consent == "y":
+            playercard3 = cards[random.randint(0, 12)]
+            playercardlist.append(playercard3)
+            cpucardlist.append(cpucard2)
+            print(f"The dealer's total card is {cpucard + cpucard2}.")
+            print(
+                f"Your total card is {playercard + playercard2 + playercard3}.")
     picker()
 
 elif playing_consent == "n":
@@ -56,6 +66,8 @@ elif playing_consent == "n":
     Do you got the gots to play?
     Or you need more time to grow it?
     """)
+
+
 else:
     print(blackjacklogo)
     print("Restart the program and check your input.")
