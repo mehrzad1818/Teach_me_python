@@ -59,6 +59,8 @@ if playing_consent == "y":
                 f"The dealer's total card is {cpucard + cpucard2 + cpucard3}.")
             print(
                 f"Your total card is {playercard + playercard2 + playercard3}.")
+        elif second_consent == "n":
+            print("I don't know what to do at this point.")
         if (playercard + playercard2) > 21:
             print("You've lost.")
         elif (playercard + playercard2) == 21:
