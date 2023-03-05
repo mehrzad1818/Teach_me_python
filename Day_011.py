@@ -86,9 +86,6 @@ else:
     print("Restart the program and check your input.")
 
 
-import random
-
-
 def deal_card():
     """Returns a random card from the deck."""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -104,7 +101,7 @@ for _ in range(2):
     computer_cards.append(deal_card())
 
 
-def coalculate_score(cards):
+def calculate_score(cards):
 
     if sum(cards) == 21 and len(cards) == 2:
         return 0
@@ -119,7 +116,7 @@ def coalculate_score(cards):
 while not is_game_over:
 
     user_score = calculate_score(user_cards)
-    computer_score = coalculate_score(computer_cards)
+    computer_score = calculate_score(computer_cards)
     print(f"    Your cards: {user_cards}, current score: {user_score}")
     print(f"    Computer's first card: {computer_cards[0]}")
 
@@ -132,3 +129,7 @@ while not is_game_over:
             user_cards.append(deal_card())
         else:
             is_game_over = True
+
+while computer_score != 0 and computer_score < 17:
+    computer_cards.append(deal_card())
+    computer_score = calculate_score
