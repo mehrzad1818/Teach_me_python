@@ -56,9 +56,29 @@ if 3 > 2:
     a_variable = 10
 
 game_level = 3
-enemies = ["Skeleton", "Zombie", "Alien"]
 
-if game_level < 5:
-    new_enemy = enemies[5]
 
-print(new_enemy)
+def create_enemy():
+    enemies = ["Skeleton", "Zombie", "Alien"]
+    if game_level < 5:
+        new_enemy = enemies[5]
+
+    print(new_enemy)
+
+
+print(enemies)
+
+
+# How to modify a Global Variable?
+# Modifiying Global Scope
+
+enemies = 1
+
+
+def increase_enemies():
+    enemies = 2
+    print(f"enemies inside function: {enemies}")
+
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
