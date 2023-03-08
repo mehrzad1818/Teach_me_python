@@ -32,3 +32,33 @@ def drink_potion():
 
 drink_potion()
 print(potion_strenght)
+
+# When you create a new variable inside a FUNCTION, it is only available inside that function
+
+
+# Global Scope
+
+player_health = 10  # This is a global variable
+
+
+def game():
+    def drink_potion():
+        potion_strenght = 2  # This is a local variable
+        print(potion_strenght)
+        print(player_health)
+
+
+drink_potion()
+print(player_health)
+
+# In Python, there's no such thing as Block Scope:
+if 3 > 2:
+    a_variable = 10
+
+game_level = 3
+enemies = ["Skeleton", "Zombie", "Alien"]
+
+if game_level < 5:
+    new_enemy = enemies[5]
+
+print(new_enemy)
