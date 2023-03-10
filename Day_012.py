@@ -144,16 +144,17 @@ if difficulty == "hard":
 elif difficulty == "easy":
     print(f"You have {EASY_MODE} attempts remaining to guess the number.")
 
+    guess = input("What is your guess?\n")
+
 
 def compare(difficulty, answer, guess):
+    """This function compares the input value with randomly generated one."""
 
     lives = 0
     if difficulty == "hard":
         return lives == 5
     elif difficulty == "easy":
         return lives == 10
-
-    guess = input("What is your guess?\n")
 
     if answer > guess:
         print("Too low.")
