@@ -11,6 +11,7 @@
 
 # This example below will illustrate the points:
 
+import random
 enemies = 1
 
 
@@ -116,7 +117,6 @@ def calc():
 
 # Number Guessing Game
 
-import random
 logo = """
    ___                       _____                  __                 _
   / _ \_   _  ___  ___ ___  /__   \ |__   ___    /\ \ \_   _ _ __ ___ | |__   ___ _ __
@@ -146,6 +146,12 @@ elif difficulty == "easy":
 
 
 def compare(difficulty, answer, guess):
+
+    lives = 0
+    if difficulty == "hard":
+        return lives == 5
+    elif difficulty == "easy":
+        return lives == 10
 
     guess = input("What is your guess?\n")
 
