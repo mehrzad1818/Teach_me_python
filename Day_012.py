@@ -116,7 +116,6 @@ def calc():
 
 
 # Number Guessing Game
-
 logo = """
    ___                       _____                  __                 _
   / _ \_   _  ___  ___ ___  /__   \ |__   ___    /\ \ \_   _ _ __ ___ | |__   ___ _ __
@@ -144,17 +143,16 @@ if difficulty == "hard":
 elif difficulty == "easy":
     print(f"You have {EASY_MODE} attempts remaining to guess the number.")
 
-    guess = input("What is your guess?\n")
-
 
 def compare(difficulty, answer, guess):
     """This function compares the input value with randomly generated one."""
+    guess = int(input("What is your guess?\n"))
 
-    lives = 0
-    if difficulty == "hard":
-        return lives == 5
-    elif difficulty == "easy":
-        return lives == 10
+    # lives = 0
+    # if difficulty == "hard":
+    #     return lives == 5
+    # elif difficulty == "easy":
+    #     return lives == 10
 
     if answer > guess:
         print("Too low.")
