@@ -136,6 +136,7 @@ print(f"Psssst, the correct answer is {answer}")
 HARD_MODE = 5
 EASY_MODE = 10
 
+guess = []
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
 if difficulty == "hard":
@@ -146,20 +147,22 @@ elif difficulty == "easy":
 
 def compare(difficulty, answer, guess):
     """This function compares the input value with randomly generated one."""
-    guess = int(input("What is your guess?\n"))
 
-    # lives = 0
-    # if difficulty == "hard":
-    #     return lives == 5
-    # elif difficulty == "easy":
-    #     return lives == 10
+    if difficulty == "hard":
+        return HARD_MODE
+    elif difficulty == "easy":
+        return EASY_MODE
 
-    if answer > guess:
-        print("Too low.")
-    if guess > answer:
-        print("Too high.")
-    if guess == answer:
-        print("You guessed right.")
+    while difficulty != 0:
+        guess = int(input("What is your guess?\n"))
+
+        if answer > guess:
+            print("Too low.")
+            HARD_MODE -= 1
+        if guess > answer:
+            print("Too high.")
+        if guess == answer:
+            print("You guessed right.")
 
 
 compare(difficulty, answer, guess)
