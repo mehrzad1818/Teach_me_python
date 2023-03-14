@@ -51,3 +51,23 @@ print(dice_imgs[dice_num])
 dice_imgs = ["1", "2", "3", "4", "5", "6"]
 dice_num = randint(0, 5)
 print(dice_imgs[dice_num])
+
+# 3. Play Computer
+#       Try to think like a computer,
+#       going through each process one by one
+
+# Code with error
+
+year = int(input("What's your year of birth?\n"))
+if year > 1980 and year < 1994:
+    print("You are a millenial.")
+elif year > 1994:
+    print("You are a Gen Z.")
+
+# Fixed Code
+
+year = int(input("What's your year of birth?\n"))
+if year > 1980 and year < 1994:
+    print("You are a millenial.")
+elif year >= 1994:
+    print("You are a Gen Z.")
