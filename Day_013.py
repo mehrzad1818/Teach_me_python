@@ -71,3 +71,45 @@ if year > 1980 and year < 1994:
     print("You are a millenial.")
 elif year >= 1994:
     print("You are a Gen Z.")
+
+#  4. Fix the error
+#       Errors are often shown by IDE, so fix them as soon as you see them.
+
+# Broken Code
+
+age = input("How old are you? ")
+if age > 18:
+print("You can drive at age {age}.")
+
+# Fixed code
+
+age = int(input("How old are you? "))
+if age > 18:
+    print(f"You can drive at age {age}.")
+
+# 5. Print is your friend
+#       Printing a part of your code helps you trace where the problem lies.
+
+# Code with bug
+
+pages = 0
+word_per_page = 0
+
+pages = int(input("Number of pages: "))
+word_per_page == int(input("Number of words per page: "))
+
+total_words = pages * word_per_page
+
+print(total_words)
+
+# Fixed Code
+
+pages = 0
+word_per_page = 0
+
+pages = int(input("Number of pages: "))
+word_per_page = int(input("Number of words per page: "))
+
+total_words = pages * word_per_page
+
+print(total_words)
