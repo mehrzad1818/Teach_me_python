@@ -155,3 +155,57 @@ mutate([1, 2, 3, 5, 8, 13])
 
 # 10. Ask StackOverflow
 #       You can alwyas ask experts on websites to help you
+
+
+# Day 13.1 - Debug Odd or Even Exercise
+
+# Broken Code
+
+number = int(input("Which number do you want to check?\n"))
+
+if number % 2 = 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number.")
+
+# Fixed Code
+
+number = int(input("Which number do you want to check?\n"))
+
+if ((number % 2) == (0)):
+    print("This is an even number.")
+else:
+    print("This is an odd number.")
+
+
+# Day 13.2 - Debug Leap Year Exercise
+
+# Broken Code
+
+year = input("Which year do you want to check?\n")
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("Not leap year.")
+
+# Fixed Code
+
+year = input("Which year do you want to check?\n")
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("Not leap year.")
