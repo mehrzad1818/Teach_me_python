@@ -113,3 +113,45 @@ word_per_page = int(input("Number of words per page: "))
 total_words = pages * word_per_page
 
 print(total_words)
+
+
+# 6. Use a Debugger
+#       Using debuggers helps you identify
+# pythontutor.com and thonny are both great
+
+# Code with error
+
+def mutate(a_list):
+    b_list = []
+    for item in a_list:
+        new_item = item * 2
+    b_list.append(new_item)
+    print(b_list)
+
+
+mutate([1, 2, 3, 5, 8, 13])
+
+# Fixed Code
+
+
+def mutate(a_list):
+    b_list = []
+    for item in a_list:
+        new_item = item * 2
+        b_list.append(new_item)
+    print(b_list)
+
+
+mutate([1, 2, 3, 5, 8, 13])
+
+# 7. Take a break
+#       Taking a break makes your mind refreshed and you are able to recognize the problem after rest
+
+# 8. Ask a friend
+#       Asking your friend to find you the problem is the best.
+
+# 9. Run often
+#       Debug your code after writing a few lines so that you confirmed it
+
+# 10. Ask StackOverflow
+#       You can alwyas ask experts on websites to help you
