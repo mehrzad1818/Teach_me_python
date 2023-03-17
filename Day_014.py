@@ -24,3 +24,8 @@ versus_symbol = """
     VVV    L.   I8 ,, 
      W     M9mmmP' db 
 """
+
+import random
+
+
+random_number = random.randint(1, 10
