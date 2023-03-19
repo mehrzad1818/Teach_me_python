@@ -3,28 +3,28 @@
 # Today's project is to make a game named "Higher or Lower"
 #   This game compares two situation and gives us an output.
 
+import random
 main_logo = """
-    __  __    _              __                
+    __  __    _              __
    / / / /   (_)   ____ _   / /_   ___    _____
   / /_/ /   / /   / __ `/  / __ \ / _ \  / ___/
- / __  /   / /   / /_/ /  / / / //  __/ / /    
-/_/ /_/   /_/    \__, /  /_/ /_/ \___/ /_/     
-    __          /____/                         
-   / /   ____  _      __  ___    _____         
-  / /   / __ \| | /| / / / _ \  / ___/         
- / /___/ /_/ /| |/ |/ / /  __/ / /             
-/_____/\____/ |__/|__/  \___/ /_/              
-                                               
+ / __  /   / /   / /_/ /  / / / //  __/ / /
+/_/ /_/   /_/    \__, /  /_/ /_/ \___/ /_/
+    __          /____/
+   / /   ____  _      __  ___    _____
+  / /   / __ \| | /| / / / _ \  / ___/
+ / /___/ /_/ /| |/ |/ / /  __/ / /
+/_____/\____/ |__/|__/  \___/ /_/
+
 """
 versus_symbol = """
-                      
-`7M'   `MF',pP"Ybd    
-  VA   ,V  8I   `"    
-   VA ,V   `YMMMa.    
-    VVV    L.   I8 ,, 
-     W     M9mmmP' db 
-"""
 
+`7M'   `MF',pP"Ybd
+  VA   ,V  8I   `"
+   VA ,V   `YMMMa.
+    VVV    L.   I8 ,,
+     W     M9mmmP' db
+"""
 data = [
     {
         'name': 'Instagram',
@@ -339,3 +339,10 @@ data = [
 print(main_logo)
 
 score = 0
+
+
+option_a = random.choice((list(data()))))
+# option_b =
+
+print(option_a)
+# def comparison():
