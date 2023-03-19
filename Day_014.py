@@ -338,37 +338,48 @@ data = [
 
 print(main_logo)
 
-score = 0
 
-option_a = random.choice(data)
-option_b = random.choice(data)
+def game():
 
-option_a_info = (option_a['name'],
-                 option_a['description'], option_a['country'])
-option_b_info = (option_b['name'],
-                 option_b['description'], option_b['country'])
+    break_game = False
 
-A = (option_a['follower_count'])
-B = (option_b['follower_count'])
+    while break_game == False:
 
-print(
-    f"Compare A: {(option_a['name'])}, {(option_a['description'])}, from {(option_a['country'])}.")
+        score = 0
 
-print(versus_symbol)
+        option_a = random.choice(data)
+        option_b = random.choice(data)
 
-print(
-    f"Compare B: {(option_b['name'])}, {(option_b['description'])}, from {(option_b['country'])}.")
+        option_a_info = (option_a['name'],
+                         option_a['description'], option_a['country'])
+        option_b_info = (option_b['name'],
+                         option_b['description'], option_b['country'])
 
+        A = (option_a['follower_count'])
+        B = (option_b['follower_count'])
 
-Players_input = input(str("Who has more followers? Type 'A' or 'B': "))
+        print(
+            f"Compare A: {(option_a['name'])}, {(option_a['description'])}, from {(option_a['country'])}.")
 
-if Players_input == 'A' and A > B:
-    score += 1
-    print(f"You're right! Current score: {score}")
-elif Players_input == 'A' and B > A:
-    print(f"Sorry. That's wrong. Final score: {score}")
-elif Players_input == 'B' and B > A:
-    score += 1
-    print(f"You're right! Current score: {score}")
-elif Players_input == 'B' and A > B:
-    print(f"Sorry. That's wrong. Final score: {score}")
+        print(versus_symbol)
+
+        print(
+            f"Compare B: {(option_b['name'])}, {(option_b['description'])}, from {(option_b['country'])}.")
+
+        Players_input = input(str("Who has more followers? Type 'A' or 'B': "))
+
+        if Players_input == 'A' and A > B:
+            score += 1
+            print(f"You're right! Current score: {score}")
+
+        elif Players_input == 'A' and B > A:
+            break_game = True
+            print(f"Sorry. That's wrong. Final score: {score}")
+
+        elif Players_input == 'B' and B > A:
+            score += 1
+            print(f"You're right! Current score: {score}")
+
+        elif Players_input == 'B' and A > B:
+            break_game = True
+            print(f"Sorry. That's wrong. Final score: {score}")
