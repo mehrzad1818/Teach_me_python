@@ -341,8 +341,11 @@ print(main_logo)
 score = 0
 
 
-option_a = random.choice((list(data()))))
-# option_b =
+option_a = random.choice(data)
 
-print(option_a)
+option_a_info = (option_a['name', 'country'], ['description'], ['country'])
+
+option_b = random.choice(data)
+
+print(f"Compare A: {(option_a['name'])}")
 # def comparison():
