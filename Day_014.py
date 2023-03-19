@@ -351,3 +351,6 @@ option_b_info = (option_b['name'],
 
 print(
     f"Compare A: {(option_a['name'])}, {(option_a['description'])}, from {(option_a['country'])}.")
+print(versus_symbol)
+print(
+    f"Compare B: {(option_b['name'])}, {(option_b['description'])}, from {(option_b['country'])}.")
