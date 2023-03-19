@@ -348,9 +348,27 @@ option_a_info = (option_a['name'],
 option_b_info = (option_b['name'],
                  option_b['description'], option_b['country'])
 
+A = (option_a['follower_count'])
+B = (option_b['follower_count'])
 
 print(
     f"Compare A: {(option_a['name'])}, {(option_a['description'])}, from {(option_a['country'])}.")
+
 print(versus_symbol)
+
 print(
     f"Compare B: {(option_b['name'])}, {(option_b['description'])}, from {(option_b['country'])}.")
+
+
+Players_input = input(str("Who has more followers? Type 'A' or 'B': "))
+
+if Players_input == 'A' and A > B:
+    score += 1
+    print(f"You're right! Current score: {score}")
+elif Players_input == 'A' and B > A:
+    print(f"Sorry. That's wrong. Final score: {score}")
+elif Players_input == 'B' and B > A:
+    score += 1
+    print(f"You're right! Current score: {score}")
+elif Players_input == 'B' and A > B:
+    print(f"Sorry. That's wrong. Final score: {score}")
