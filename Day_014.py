@@ -345,8 +345,6 @@ def game():
 
     while break_game == False:
 
-        score = 0
-
         option_a = random.choice(data)
         option_b = random.choice(data)
 
@@ -368,6 +366,8 @@ def game():
 
         Players_input = input(str("Who has more followers? Type 'A' or 'B': "))
 
+        score = 0
+
         if Players_input == 'A' and A > B:
             score += 1
             print(f"You're right! Current score: {score}")
@@ -383,8 +383,6 @@ def game():
         elif Players_input == 'B' and A > B:
             break_game = True
             print(f"Sorry. That's wrong. Final score: {score}")
-        import os
-        os.system('cls')
 
 
 game()
