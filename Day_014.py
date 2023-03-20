@@ -383,6 +383,8 @@ def game():
         elif Players_input == 'B' and A > B:
             break_game = True
             print(f"Sorry. That's wrong. Final score: {score}")
+        import os
+        os.system('cls')
 
 
 game()
