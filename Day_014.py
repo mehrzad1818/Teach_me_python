@@ -350,6 +350,9 @@ def game():
         option_a = random.choice(data)
         option_b = random.choice(data)
 
+        if option_a == option_b:
+            option_b = random.choice(data)
+
         A = (option_a['follower_count'])
         B = (option_b['follower_count'])
 
