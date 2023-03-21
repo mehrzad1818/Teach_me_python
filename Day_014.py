@@ -4,6 +4,7 @@
 #   This game compares two situation and gives us an output.
 
 import random
+
 main_logo = """
     __  __    _              __
    / / / /   (_)   ____ _   / /_   ___    _____
@@ -339,7 +340,6 @@ data = [
 print(main_logo)
 
 
-
 def game():
     score = 0
 
@@ -349,11 +349,6 @@ def game():
 
         option_a = random.choice(data)
         option_b = random.choice(data)
-
-        option_a_info = (option_a['name'],
-                         option_a['description'], option_a['country'])
-        option_b_info = (option_b['name'],
-                         option_b['description'], option_b['country'])
 
         A = (option_a['follower_count'])
         B = (option_b['follower_count'])
