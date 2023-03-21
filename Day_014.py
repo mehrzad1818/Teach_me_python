@@ -339,7 +339,9 @@ data = [
 print(main_logo)
 
 
+
 def game():
+    score = 0
 
     break_game = False
 
@@ -365,8 +367,6 @@ def game():
             f"Compare B: {(option_b['name'])}, {(option_b['description'])}, from {(option_b['country'])}.")
 
         Players_input = input(str("Who has more followers? Type 'A' or 'B': "))
-
-        score = 0
 
         if Players_input == 'A' and A > B:
             score += 1
