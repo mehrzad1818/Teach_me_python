@@ -34,3 +34,8 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+
+choice = input(str("What would you like? (espresso/latte/cappuccino)\n")).lower
+
+print()
