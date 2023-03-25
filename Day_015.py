@@ -50,10 +50,23 @@ def coffee_process(choice):
     MENU[choice]
 
 
-print(f"Here is {remainder} in change.")
-print(f"Here is your {choice}. Enjoy!")
+# print(f"Here is {remainder} in change.")
+# print(f"Here is your {choice}. Enjoy!")
 
 
-def report():
+def report(choice):
     print(resources)
     print(deposit)
+
+
+def remainder(choice, quarters, dimes, nickels, pennies):
+    """Calculates to remainder money given by the customer."""
+
+    total_cost = (quarters * 0.25) + (dimes * 0.10) + \
+        (nickels * 0.05) + (pennies * 0.01)
+
+    choice_cost = MENU[choice:"cost"]
+
+    change = (total_cost - choice_cost)
+
+    print(f"Here is {change}$ in change.")
