@@ -47,7 +47,7 @@ pennies = input(int("How many pennies? "))
 
 
 def coffee_process(choice):
-    resources
+    MENU[choice]
 
 
 print(f"Here is {remainder} in change.")
