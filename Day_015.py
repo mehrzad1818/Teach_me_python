@@ -38,4 +38,22 @@ resources = {
 
 choice = input(str("What would you like? (espresso/latte/cappuccino)\n")).lower
 
-print()
+print("Please insert coins.")
+
+quarters = input(int("How many quarters? "))
+dimes = input(int("How many dimes? "))
+nickels = input(int("How many nickels? "))
+pennies = input(int("How many pennies? "))
+
+
+def coffee_process(choice):
+    resources
+
+
+print(f"Here is {remainder} in change.")
+print(f"Here is your {choice}. Enjoy!")
+
+
+def report():
+    print(resources)
+    print(deposit)
