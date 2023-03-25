@@ -40,10 +40,10 @@ choice = input(str("What would you like? (espresso/latte/cappuccino)\n")).lower
 
 print("Please insert coins.")
 
-quarters = input(int("How many quarters? "))
-dimes = input(int("How many dimes? "))
-nickels = input(int("How many nickels? "))
-pennies = input(int("How many pennies? "))
+quarters = int(input("How many quarters? "))
+dimes = int(input("How many dimes? "))
+nickels = int(input("How many nickels? "))
+pennies = int(input("How many pennies? "))
 
 
 def coffee_process(choice):
