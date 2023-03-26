@@ -37,13 +37,24 @@ resources = {
 
 MONEY = 0
 
+
+def resources_report(order_ingredients):
+    """ Checks the coffee machine's resources."""
+    for item in order_ingredients:
+        if order_ingredients[item] >= resources[item]:
+            print(f"Sorry, there is not enough {item}.")
+
+
 IS_ON = True
 
 while True:
+
     choice = input(
         str("What would you like? (espresso/latte/cappuccino)\n")).lower
+
     if choice == "off":
         IS_ON = False
+
     elif choice == "report":
 
         print(f"Water: {resources['water']}ml")
@@ -51,35 +62,39 @@ while True:
         print(f"Coffee: {resources['coffee']}g")
         print(f"Money: ${MONEY}")
 
-print("Please insert coins.")
+    else:
+        drink = MENU[choice]
+        resources_report(drink["ingredients"])
 
-quarters = int(input("How many quarters? "))
-dimes = int(input("How many dimes? "))
-nickels = int(input("How many nickels? "))
-pennies = int(input("How many pennies? "))
+# print("Please insert coins.")
 
-
-def coffee_process(choice):
-    MENU[choice]
-
-
-# print(f"Here is {remainder} in change.")
-# print(f"Here is your {choice}. Enjoy!")
+# quarters = int(input("How many quarters? "))
+# dimes = int(input("How many dimes? "))
+# nickels = int(input("How many nickels? "))
+# pennies = int(input("How many pennies? "))
 
 
-def report(choice):
-    print(resources)
-    print(deposit)
+# def coffee_process(choice):
+#     MENU[choice]
 
 
-def remainder(choice, quarters, dimes, nickels, pennies):
-    """Calculates to remainder money given by the customer."""
+# # print(f"Here is {remainder} in change.")
+# # print(f"Here is your {choice}. Enjoy!")
 
-    total_cost = (quarters * 0.25) + (dimes * 0.10) + \
-        (nickels * 0.05) + (pennies * 0.01)
 
-    choice_cost = MENU[choice:"cost"]
+# def report(choice):
+#     print(resources)
+#     print(deposit)
 
-    change = (total_cost - choice_cost)
 
-    print(f"Here is {change}$ in change.")
+# def remainder(choice, quarters, dimes, nickels, pennies):
+#     """Calculates to remainder money given by the customer."""
+
+#     total_cost = (quarters * 0.25) + (dimes * 0.10) + \
+#         (nickels * 0.05) + (pennies * 0.01)
+
+#     choice_cost = MENU[choice:"cost"]
+
+#     change = (total_cost - choice_cost)
+
+#     print(f"Here is {change}$ in change.")
