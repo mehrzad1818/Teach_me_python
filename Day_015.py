@@ -35,8 +35,21 @@ resources = {
     "coffee": 100,
 }
 
+MONEY = 0
 
-choice = input(str("What would you like? (espresso/latte/cappuccino)\n")).lower
+IS_ON = True
+
+while True:
+    choice = input(
+        str("What would you like? (espresso/latte/cappuccino)\n")).lower
+    if choice == "off":
+        IS_ON = False
+    elif choice == "report":
+
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: ${MONEY}")
 
 print("Please insert coins.")
 
