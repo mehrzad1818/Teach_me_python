@@ -58,6 +58,16 @@ def process_coins():
 
     total = (quarters * 0.25) + (dimes * 0.10) + \
         (nickels * 0.05) + (pennies * 0.01)
+    return total
+
+
+def successful_transaction(money_received, drink_cost):
+    """ Teturn True when the payment is accepted, or False if money is insufficient. """
+    if money_received >= drink_cost:
+        return True
+    else:
+        print("Sorry. That's not enough money. Money refunded.")
+        return False
 
 
 IS_ON = True
@@ -78,6 +88,7 @@ while True:
     else:
         drink = MENU[choice]
         if resources_report(drink["ingredients"]):
+            PAYMENT = process_coins()
 
             # print("Please insert coins.")
 
