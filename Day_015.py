@@ -64,10 +64,20 @@ def process_coins():
 def successful_transaction(money_received, drink_cost):
     """ Teturn True when the payment is accepted, or False if money is insufficient. """
     if money_received >= drink_cost:
+        change = round(money_received - drink_cost, 2)
+        print(f"Here is ${change} change.")
+        global MONEY
+        MONEY += drink_cost
         return True
-    else:
-        print("Sorry. That's not enough money. Money refunded.")
-        return False
+    print("Sorry. That's not enough money. Money refunded.")
+    return False
+
+
+def make_coffee(drink_name, order_ingredient):
+    """ Deduct the required ingredients from the resources. """
+    for item in order_ingredient:
+        resources[item] -= order_ingredient[item]
+    print(f"Here is your {drink_name}. ENJOY!")
 
 
 IS_ON = True
@@ -75,7 +85,7 @@ IS_ON = True
 while True:
 
     choice = input(
-        str("What would you like? (espresso/latte/cappuccino)\n")).lower
+        str("What would you like? (espresso/latte/cappuccino)\n"))
 
     if choice == "off":
         IS_ON = False
@@ -89,24 +99,5 @@ while True:
         drink = MENU[choice]
         if resources_report(drink["ingredients"]):
             PAYMENT = process_coins()
-
-            # print("Please insert coins.")
-
-            # def coffee_process(choice):
-            #     MENU[choice]
-
-            # # print(f"Here is {remainder} in change.")
-            # # print(f"Here is your {choice}. Enjoy!")
-
-            # def report(choice):
-            #     print(resources)
-            #     print(deposit)
-
-            # def remainder(choice, quarters, dimes, nickels, pennies):
-            #     """Calculates to remainder money given by the customer."""
-
-            #     choice_cost = MENU[choice:"cost"]
-
-            #     change = (total_cost - choice_cost)
-
-            #     print(f"Here is {change}$ in change.")
+            if successful_transaction(PAYMENT, drink["cost"]):
+                make_coffee(choice, drink["ingredients"])
