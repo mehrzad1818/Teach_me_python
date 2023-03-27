@@ -47,6 +47,19 @@ def resources_report(order_ingredients):
     return True
 
 
+def process_coins():
+    """Returns the total calculated from coins inserted. """
+    print("Please insert coins.")
+
+    quarters = int(input("How many quarters? "))
+    dimes = int(input("How many dimes? "))
+    nickels = int(input("How many nickels? "))
+    pennies = int(input("How many pennies? "))
+
+    total = (quarters * 0.25) + (dimes * 0.10) + \
+        (nickels * 0.05) + (pennies * 0.01)
+
+
 IS_ON = True
 
 while True:
@@ -66,35 +79,23 @@ while True:
         drink = MENU[choice]
         if resources_report(drink["ingredients"]):
 
-# print("Please insert coins.")
+            # print("Please insert coins.")
 
-# quarters = int(input("How many quarters? "))
-# dimes = int(input("How many dimes? "))
-# nickels = int(input("How many nickels? "))
-# pennies = int(input("How many pennies? "))
+            # def coffee_process(choice):
+            #     MENU[choice]
 
+            # # print(f"Here is {remainder} in change.")
+            # # print(f"Here is your {choice}. Enjoy!")
 
-# def coffee_process(choice):
-#     MENU[choice]
+            # def report(choice):
+            #     print(resources)
+            #     print(deposit)
 
+            # def remainder(choice, quarters, dimes, nickels, pennies):
+            #     """Calculates to remainder money given by the customer."""
 
-# # print(f"Here is {remainder} in change.")
-# # print(f"Here is your {choice}. Enjoy!")
+            #     choice_cost = MENU[choice:"cost"]
 
+            #     change = (total_cost - choice_cost)
 
-# def report(choice):
-#     print(resources)
-#     print(deposit)
-
-
-# def remainder(choice, quarters, dimes, nickels, pennies):
-#     """Calculates to remainder money given by the customer."""
-
-#     total_cost = (quarters * 0.25) + (dimes * 0.10) + \
-#         (nickels * 0.05) + (pennies * 0.01)
-
-#     choice_cost = MENU[choice:"cost"]
-
-#     change = (total_cost - choice_cost)
-
-#     print(f"Here is {change}$ in change.")
+            #     print(f"Here is {change}$ in change.")
