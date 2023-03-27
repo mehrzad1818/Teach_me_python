@@ -43,6 +43,8 @@ def resources_report(order_ingredients):
     for item in order_ingredients:
         if order_ingredients[item] >= resources[item]:
             print(f"Sorry, there is not enough {item}.")
+            return False
+    return True
 
 
 IS_ON = True
@@ -54,17 +56,15 @@ while True:
 
     if choice == "off":
         IS_ON = False
-
     elif choice == "report":
 
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}g")
         print(f"Money: ${MONEY}")
-
     else:
         drink = MENU[choice]
-        resources_report(drink["ingredients"])
+        if resources_report(drink["ingredients"]):
 
 # print("Please insert coins.")
 
