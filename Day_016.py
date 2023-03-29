@@ -65,4 +65,13 @@ my_screen.exitonclick()
 # Now we are going to use pretty table:
 
 table = PrettyTable()
+
+row_data = ["Pokemon Name", "Type"]
+column_data = ["Pikachu", "Electric"], [
+    "Squirtle", "Water"], ["Charmander", "Fire"]
+
+
+table.field_names = row_data
+table.add_rows(column_data)
+
 print(table)
