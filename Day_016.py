@@ -73,5 +73,6 @@ column_data = ["Pikachu", "Electric"], [
 
 table.field_names = row_data
 table.add_rows(column_data)
-
+table.align = "l"
+table.valign = "b"
 print(table)
