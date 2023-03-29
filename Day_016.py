@@ -11,3 +11,20 @@
 
 
 # How to use OOP????
+
+# A real life example of OOP implementation would be a virtual waiter.
+# The two essential attributes of the waiter would be:
+
+# 1. What it has (attributes):
+is_holding_plate = True
+tables_responsible = [4, 5, 6]
+
+# 2. What it does (methods):
+
+
+def take_order(table, order):
+    """ Takes order """
+
+
+def take_payment(amount):
+    """ add money to the restaurant """
