@@ -11,7 +11,9 @@
 
 
 # How to use OOP????
+
 from turtle import Turtle, Screen
+from prettytable import PrettyTable
 
 # A real life example of OOP implementation would be a virtual waiter.
 # The two essential attributes of the waiter would be:
@@ -58,3 +60,9 @@ my_screen.exitonclick()
 # Object/Method
 # car.stop()
 # car is the object/stop() is the method
+
+
+# Now we are going to use pretty table:
+
+table = PrettyTable()
+print(table)
