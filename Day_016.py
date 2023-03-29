@@ -11,12 +11,13 @@
 
 
 # How to use OOP????
+from turtle import Turtle, Screen
 
 # A real life example of OOP implementation would be a virtual waiter.
 # The two essential attributes of the waiter would be:
 
 # 1. What it has (attributes):
-is_holding_plate = True
+IS_HOLDING_PLATE = True
 tables_responsible = [4, 5, 6]
 
 # 2. What it does (methods):
@@ -28,3 +29,32 @@ def take_order(table, order):
 
 def take_payment(amount):
     """ add money to the restaurant """
+
+
+# In OOP, we have object and class. Object is the product and Class is the category in which the object is produced from.
+# Take a look at this example:
+
+# car = CarBlueprint()
+
+# The piece of code above is an example of object/class.
+# The class is always written in Pascal typecase (CapitalizingEachWordInTheName)
+
+oscar = Turtle()
+print(oscar)
+oscar.shape("turtle")
+oscar.color("blue")
+oscar.goto(100, 100)
+
+my_screen = Screen()
+print(my_screen.canvheight)
+my_screen.exitonclick()
+
+# Car has 100 kph and 45L fuel:
+# Object/Attribute
+# car.speed
+# car is the object/speed is the attribute.
+
+# Car is moving and is going at 80 kph
+# Object/Method
+# car.stop()
+# car is the object/stop() is the method
