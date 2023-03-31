@@ -185,3 +185,32 @@ class MoneyMachine:
             print("Sorry that's not enough money. Money refunded.")
             self.money_received = 0
             return False
+
+        
+        
+from menu import Menu, MenuItem
+from coffee_maker import CoffeeMaker
+from money_machine import MoneyMachine
+
+
+money_machine = MoneyMachine()
+coffee_maker = CoffeeMaker()
+menu = Menu()
+
+IS_ON = True
+
+money_machine.report()
+coffee_maker.report()
+
+while IS_ON:
+    options = menu.get_items()
+    CHOICE = input(f"What would you like? ({options}): ")
+    if CHOICE == "off":
+        IS_ON = False
+    elif CHOICE == "report":
+        coffee_maker.report()
+        money_machine.report()
+    else:
+        drink = menu.find_drink(CHOICE)
+        if money_machine.make_payment(drink.cost) and money_machine.make_payment(drink):
+            coffee_maker.make_coffee(drink)
