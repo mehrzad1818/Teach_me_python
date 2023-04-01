@@ -2,14 +2,13 @@ class User:
     """ Manages the user. """
 
     def __init__(self, user_id, username) -> None:
-        self.Id = user_id
+        self.identity = user_id
         self.username = username
         print("New user is being created ... ")
 
 
-user_1 = User("001")
-user_1.Id = "001"
-user_1.username = "Jimmy"
+user_1 = User("001", "Jimmy")
+
 print(user_1.username)
 
 
