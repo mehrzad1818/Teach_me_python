@@ -16,3 +16,6 @@ user_2 = User()
 user_2.id = "002"
 user_2.username = "Jones"
 print(user_2.username)
+
+def enter_racemode():
+    seats = 2
