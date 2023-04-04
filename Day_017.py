@@ -30,11 +30,12 @@ from question_model import Question
 
 question_banka = []
 
-for item in question_data:
-    q_text = (item["text"])
-    q_answer = (item["answer"])
-    operon = Question(q_text, q_answer)
-    question_banka.append(operon)
+for question in question_data:
+    Q_TEXT = (question["text"])
+    Q_ANSWER = (question["answer"])
+    NEW_QUESTION = Question(q_text=Q_TEXT, q_answer=Q_ANSWER)
+    question_banka.append(NEW_QUESTION)
 
 print(question_banka)
+
 
