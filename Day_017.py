@@ -4,18 +4,16 @@ class User:
     def __init__(self, user_id, username) -> None:
         self.identity = user_id
         self.username = username
+        self.followers = 0
+        self.following = 0
         print("New user is being created ... ")
+
+    def follow(self, user):
+        user.followers += 1
+        self.following += 1
 
 
 user_1 = User("001", "Jimmy")
+user_2 = User("002", "Jones")
 
-print(user_1.username)
-
-
-user_2 = User()
-user_2.id = "002"
-user_2.username = "Jones"
-print(user_2.username)
-
-def enter_racemode():
-    seats = 2
+print(user_1.followers)
