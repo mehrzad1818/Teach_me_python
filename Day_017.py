@@ -21,3 +21,16 @@ print(user_1.followers)
 print(user_1.following)
 print(user_2.followers)
 print(user_2.following)
+
+
+# This part deals with the new challenge
+
+class Question:
+    """ Manages the questions. """
+
+    def __init__(self, text, answer) -> None:
+        self.text = text
+        self.answer = answer
+
+
+new_q = Question("001", "Jimmy")
