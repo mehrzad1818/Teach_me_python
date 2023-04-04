@@ -25,12 +25,16 @@ print(user_2.following)
 
 # This part deals with the new challenge
 
-class Question:
-    """ Manages the questions. """
+from data import question_data
+from question_model import Question
 
-    def __init__(self, text, answer) -> None:
-        self.text = text
-        self.answer = answer
+question_banka = []
 
+for item in question_data:
+    q_text = (item["text"])
+    q_answer = (item["answer"])
+    operon = Question(q_text, q_answer)
+    question_banka.append(operon)
 
-new_q = Question("001", "Jimmy")
+print(question_banka)
+
