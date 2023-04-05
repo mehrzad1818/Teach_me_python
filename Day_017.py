@@ -47,6 +47,12 @@ quiz = QuizBrain(question_banka)
 while quiz.has_new_questions:
     quiz.next_question()
 
+if quiz.has_new_questions is False:
+    print("You've completed the quiz.")
+    print(
+        f"Your final score is: {quiz.score}/{quiz.question_number}")
+
+
     
 # question_model.py file:
 
@@ -57,7 +63,6 @@ class Question:
         self.text = q_text
         self.answer = q_answer
 
-        
         
 # data.py file:
 
@@ -78,7 +83,6 @@ question_data = [
     {"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
 ]
 
-
 # quiz_brain.py file:
 
 class QuizBrain:
@@ -86,17 +90,30 @@ class QuizBrain:
 
     def __init__(self, q_list) -> None:
         self.question_number = 0
+        self.score = 0
         self.question_list = q_list
 
     def has_new_questions(self):
         """ Manages the remaining questions. """
         return self.question_list[self.question_number + 1]
-#Alternative        return self.question_number < len(self.question_list)
+        # return self.question_number < len(self.question_list)
 
     def next_question(self):
         """ Manages the next question. """
         current_question = self.question_list[self.question_number]
         self.question_number += 1
-        input(
+        user_answer = input(
             f"Q.{(self.question_number)}: {current_question.text} (True/False): ")
+        self.check_answer(user_answer, current_question.answer)
+
+    def check_answer(self, user_answer, correct_answer):
+        """ Manages the answers. """
+        if user_answer.lower() == correct_answer.lower():
+            self.score += 1
+            print("You got it right!")
+        else:
+            print("That's wrong.")
+        print(f"The correct answer is: {correct_answer}.")
+        print(f"Your current score is: {self.score}/{self.question_number}")
+        print("\n")
 
