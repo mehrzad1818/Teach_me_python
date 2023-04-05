@@ -1,3 +1,6 @@
+# This is the start of the Day 17. 
+
+
 class User:
     """ Manages the user. """
 
@@ -25,6 +28,38 @@ print(user_2.following)
 
 # This part deals with the new challenge
 
+# New challenges main.py file:
+
+from data import question_data
+from question_model import Question
+from quiz_brain import QuizBrain
+
+question_banka = []
+
+for question in question_data:
+    Q_TEXT = (question["text"])
+    Q_ANSWER = (question["answer"])
+    NEW_QUESTION = Question(q_text=Q_TEXT, q_answer=Q_ANSWER)
+    question_banka.append(NEW_QUESTION)
+
+quiz = QuizBrain(question_banka)
+
+while quiz.has_new_questions:
+    quiz.next_question()
+
+    
+# question_model.py file:
+
+class Question:
+    """ Manages the questions. """
+
+    def __init__(self, q_text, q_answer) -> None:
+        self.text = q_text
+        self.answer = q_answer
+
+        
+        
+# data.py file:
 
 question_data = [
     {"text": "A slug's blood is green.", "answer": "True"},
@@ -44,18 +79,23 @@ question_data = [
 ]
 
 
+# quiz_brain.py file:
 
-from data import question_data
-from question_model import Question
+class QuizBrain:
+    "Manges the game."
 
-question_banka = []
+    def __init__(self, q_list) -> None:
+        self.question_number = 0
+        self.question_list = q_list
 
-for question in question_data:
-    Q_TEXT = (question["text"])
-    Q_ANSWER = (question["answer"])
-    NEW_QUESTION = Question(q_text=Q_TEXT, q_answer=Q_ANSWER)
-    question_banka.append(NEW_QUESTION)
+    def has_new_questions(self):
+        """ Manages the remaining questions. """
+        if self.question_list[self.question_number + 1] is False:
+            return False
 
-print(question_banka)
-
-
+    def next_question(self):
+        """ Manages the next question. """
+        current_question = self.question_list[self.question_number]
+        self.question_number += 1
+        input(
+            f"Q.{(self.question_number)}: {current_question.text} (True/False): ")
