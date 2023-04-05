@@ -90,7 +90,8 @@ class QuizBrain:
 
     def has_new_questions(self):
         """ Manages the remaining questions. """
-        return self.question_number < len(self.question_list)
+        return self.question_list[self.question_number + 1]
+#Alternative        return self.question_number < len(self.question_list)
 
     def next_question(self):
         """ Manages the next question. """
