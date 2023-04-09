@@ -32,19 +32,20 @@ from turtle import Turtle, Screen
 
 timmy_the_turtle = Turtle()
 
-forward_step = 100
-degree = 90
+FORWARD_STEP = 100
+STEP = 90
 
 timmy_the_turtle.shape("turtle")
 timmy_the_turtle.color("red")
 
 for i in range(0, 4):
 
-    timmy_the_turtle.forward(forward_step)
-    timmy_the_turtle.right(degree)
+    timmy_the_turtle.forward(FORWARD_STEP)
+    timmy_the_turtle.right(STEP)
 
 screen = Screen()
 screen.exitonclick()
+
 
 
 # The most basic way of importing:
