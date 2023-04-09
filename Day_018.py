@@ -52,7 +52,15 @@ screen.exitonclick()
 # import turtle
 # tim = turtle.Turtle()
 
+
 # A little bit more advanced:
 
 # from turtle import Turtle
 # tim = Turtle()
+
+
+# The easiest way, but the most confusing one
+
+# from turtle import *
+# forward(100)
+
