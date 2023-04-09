@@ -47,7 +47,6 @@ screen = Screen()
 screen.exitonclick()
 
 
-
 # The most basic way of importing:
 
 # import turtle
@@ -64,4 +63,23 @@ screen.exitonclick()
 
 # from turtle import *
 # forward(100)
+
+
+# You can draw a dashed line with the code below:
+
+from turtle import Turtle, Screen
+
+tim = Turtle()
+
+
+for i in range(20):
+    tim.down()
+    tim.forward(10)
+    tim.up()
+    tim.forward(10)
+
+screen = Screen()
+screen.exitonclick()
+
+
 
