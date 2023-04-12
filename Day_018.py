@@ -122,6 +122,48 @@ screen = Screen()
 screen.exitonclick()
 
 
+ # This challenge requires the turtle to do random walks in specified spaces and change color at the same time.
+    
+    
+    
+    from turtle import Turtle, Screen
+import random
+
+tim = Turtle()
+tim.shape("turtle")
+tim.color("yellow")
+
+FORWARD_STEP = 75
+
+
+def shape(shape_side):
+    """ Draws a shape. """
+
+    shape_step = (360 / shape_side)
+
+    for i in range(shape_side):
+
+        tim.forward(FORWARD_STEP)
+        tim.right(shape_step)
+
+
+def change_color():
+    """ Changes the color of the turtle. """
+
+    R = random.random()
+    B = random.random()
+    G = random.random()
+
+    tim.color(R, G, B)
+
+
+for y in range(3, 8):
+    shape(y)
+    change_color()
+
+screen = Screen()
+screen.exitonclick()
+
 
 
 
