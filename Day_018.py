@@ -177,12 +177,13 @@ tim.speed(0)
 
 
 FORWARD_STEP = 100
+STEP = 44
 
 
 def shape():
     """ Draws a shape. """
 
-    tim.left(10)
+    tim.left(STEP)
     tim.circle(FORWARD_STEP)
 
 
@@ -196,7 +197,7 @@ def change_color():
     tim.color(R, G, B)
 
 
-for y in range(360):
+for y in range(int(360 / STEP)):
     shape()
     change_color()
 
