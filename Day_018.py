@@ -164,3 +164,41 @@ screen.exitonclick()
 
 
 
+# In this challenge, the turtle creates spirograph, rotating around its axis to make circles.
+
+
+from turtle import Turtle, Screen
+import random
+
+tim = Turtle()
+tim.shape("turtle")
+tim.pensize(1)
+tim.speed(0)
+
+
+FORWARD_STEP = 100
+
+
+def shape():
+    """ Draws a shape. """
+
+    tim.left(10)
+    tim.circle(FORWARD_STEP)
+
+
+def change_color():
+    """ Changes the color of the turtle. """
+
+    R = random.random()
+    B = random.random()
+    G = random.random()
+
+    tim.color(R, G, B)
+
+
+for y in range(360):
+    shape()
+    change_color()
+
+screen = Screen()
+screen.exitonclick()
