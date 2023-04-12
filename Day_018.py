@@ -155,11 +155,12 @@ def change_color():
     tim.color(R, G, B)
 
 
-while True:
+for y in range(50):
     shape()
     change_color()
 
 screen = Screen()
 screen.exitonclick()
+
 
 
