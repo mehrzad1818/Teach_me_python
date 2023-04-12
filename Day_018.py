@@ -126,25 +126,25 @@ screen.exitonclick()
     
     
     
-    from turtle import Turtle, Screen
+from turtle import Turtle, Screen
 import random
 
 tim = Turtle()
 tim.shape("turtle")
 tim.color("yellow")
 
-FORWARD_STEP = 75
+FORWARD_STEP = 25
 
 
 def shape(shape_side):
     """ Draws a shape. """
 
-    shape_step = (360 / shape_side)
-
     for i in range(shape_side):
 
-        tim.forward(FORWARD_STEP)
-        tim.right(shape_step)
+        tim.forward(random.randint(1, 5))
+        if ((random.randint(1, 99999999)) % 2) = 0 else 
+        tim.left
+        tim.right(random.randint(1, ))
 
 
 def change_color():
@@ -157,14 +157,12 @@ def change_color():
     tim.color(R, G, B)
 
 
-for y in range(3, 8):
+for y in range(5000):
     shape(y)
     change_color()
 
 screen = Screen()
 screen.exitonclick()
-
-
 
 
 
