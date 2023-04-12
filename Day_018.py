@@ -131,20 +131,37 @@ import random
 
 tim = Turtle()
 tim.shape("turtle")
-tim.color("yellow")
+tim.pensize(5)
+tim.speed(0)
 
-FORWARD_STEP = 25
+
+FORWARD_STEP = 35
 
 
-def shape(shape_side):
+def shape():
     """ Draws a shape. """
 
-    for i in range(shape_side):
+    random_number = random.randint(1, 4)
 
-        tim.forward(random.randint(1, 5))
-        if ((random.randint(1, 99999999)) % 2) = 0 else 
-        tim.left
-        tim.right(random.randint(1, ))
+    if random_number == 1:
+
+        tim.right(90)
+        tim.forward(FORWARD_STEP)
+
+    elif random_number == 2:
+
+        tim.right(180)
+        tim.forward(FORWARD_STEP)
+
+    elif random_number == 3:
+
+        tim.right(270)
+        tim.forward(FORWARD_STEP)
+
+    elif random_number == 4:
+
+        tim.right(360)
+        tim.forward(FORWARD_STEP)
 
 
 def change_color():
@@ -157,13 +174,12 @@ def change_color():
     tim.color(R, G, B)
 
 
-for y in range(5000):
-    shape(y)
+while True:
+    shape()
     change_color()
 
 screen = Screen()
 screen.exitonclick()
-
 
 
 
