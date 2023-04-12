@@ -203,3 +203,30 @@ for y in range(int(360 / STEP)):
 
 screen = Screen()
 screen.exitonclick()
+
+
+# In this final challenge, we're going to extract colors and make a pointed art with it.
+
+
+import colorgram
+# from turtle import Turtle, Screen
+# import random
+
+COLOR_NUMBER = 6
+colors = colorgram.extract('image.jpg', COLOR_NUMBER)
+
+
+rgb_list = []
+
+for numer in range(0, COLOR_NUMBER):
+
+    red = colors[numer].rgb.r
+    green = colors[numer].rgb.g
+    blue = colors[numer].rgb.b
+
+    color_code = (red, green, blue)
+
+    rgb_list.append(color_code)
+
+
+print(rgb_list)
