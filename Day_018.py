@@ -208,11 +208,11 @@ screen.exitonclick()
 # In this final challenge, we're going to extract colors and make a pointed art with it.
 
 
-import colorgram
-# from turtle import Turtle, Screen
-# import random
+# This part gives you the most frequent colors in a picture.
 
-COLOR_NUMBER = 6
+import colorgram
+
+COLOR_NUMBER = 12
 colors = colorgram.extract('image.jpg', COLOR_NUMBER)
 
 
@@ -230,3 +230,14 @@ for numer in range(0, COLOR_NUMBER):
 
 
 print(rgb_list)
+
+
+color_list = [(25, 108, 164),
+              (194, 38, 81),
+              (238, 161, 49),
+              (234, 215, 85),
+              (226, 237, 228),
+              (223, 137, 176),
+              (144, 108, 56),
+              (102, 197, 219),
+              (206, 166, 29)]
