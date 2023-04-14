@@ -283,13 +283,14 @@ def position():
     """ Changes the position of the turtle. """
     tim.setposition(X_ALIGN, Y_ALIGN)
 
-    # def change_color():
-    #     """ Changes the color of the turtle. """
 
-    #     R = color_list[0]
-    #     B = color_list[1]
-    #     G = color_list[2]
-    #     tim.color(R, G, B)
+def change_color():
+    """ Changes the color of the turtle. """
+
+    R = color_list[0]
+    B = color_list[1]
+    G = color_list[2]
+    tim.color(R, G, B)
 
 
 for y in range(10):
