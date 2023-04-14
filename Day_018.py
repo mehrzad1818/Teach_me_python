@@ -276,7 +276,7 @@ Y_ALIGN = -300
 def shape():
     """ Draws a shape. """
 
-    tim.dot(20)
+    tim.dot(20, change_color())
 
 
 def position():
@@ -295,7 +295,7 @@ def change_color():
 
 for y in range(10):
     shape()
-    change_color()
 
 screen = Screen()
 screen.exitonclick()
+
