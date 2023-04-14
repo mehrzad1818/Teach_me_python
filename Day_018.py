@@ -254,48 +254,48 @@ color_list = [
     (194, 38, 81),
     (238, 161, 49),
     (234, 215, 85),
-    (226, 237, 228),
     (223, 137, 176),
     (144, 108, 56),
     (102, 197, 219),
     (206, 166, 29)
 ]
 
+# Here are the setting in for the code:
+
 tim = Turtle()
-tim.shape("turtle")
-tim.pensize(3)
+tim.hideturtle()
+tim.penup()
 tim.speed(0)
+tim.screen.colormode(255)
 
-X_DISPLACEMENT = 50
-Y_DISPLACEMENT = 50
+# Here are the registered values:
 
-X_ALIGN = -300
-Y_ALIGN = -300
+TOTAL_NUMBER_OF_DOTS = 100
+DOT_SIZE = 20
+SPACE_BETWEEN_DOTS_IN_ROW = 50
+SPACE_BETWEEN_DOTS_IN_COLUMN = 50
+NUMBER_OF_DOTS_IN_EACH_ROW = 10
 
+# This part sets the position of the turtle on the page
 
-def shape():
-    """ Draws a shape. """
-
-    tim.dot(20, random.choice(color_list))
-
-
-def position():
-    """ Changes the position of the turtle. """
-    tim.setposition(X_ALIGN, Y_ALIGN)
+tim.setheading(225)
+tim.forward(325)
+tim.setheading(0)
 
 
-def change_color():
-    """ Changes the color of the turtle. """
+for dot_count in range(1, TOTAL_NUMBER_OF_DOTS + 1):
 
-    R = color_list[0]
-    B = color_list[1]
-    G = color_list[2]
-    tim.color(R, G, B)
+    tim.dot(DOT_SIZE, random.choice(color_list))
+    tim.forward(SPACE_BETWEEN_DOTS_IN_ROW)
 
+    if dot_count % NUMBER_OF_DOTS_IN_EACH_ROW == 0:
 
-for y in range(10):
-    shape()
+        tim.setheading(90)
+        tim.forward(SPACE_BETWEEN_DOTS_IN_COLUMN)
+        tim.setheading(180)
+        tim.forward(NUMBER_OF_DOTS_IN_EACH_ROW * SPACE_BETWEEN_DOTS_IN_ROW)
+        tim.setheading(0)
+
 
 screen = Screen()
 screen.exitonclick()
-
