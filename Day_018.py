@@ -266,7 +266,7 @@ tim.shape("turtle")
 tim.pensize(3)
 tim.speed(0)
 
-
+X_DISPLACEMENT = 50
 Y_DISPLACEMENT = 50
 
 X_ALIGN = -300
@@ -295,7 +295,7 @@ def change_color():
 
 for y in range(10):
     shape()
-    # change_color()
+    change_color()
 
 screen = Screen()
-screen.exitonclick()?
+screen.exitonclick()
