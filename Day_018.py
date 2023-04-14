@@ -276,7 +276,7 @@ Y_ALIGN = -300
 def shape():
     """ Draws a shape. """
 
-    tim.dot(20, change_color())
+    tim.dot(20, random.choice(color_list))
 
 
 def position():
