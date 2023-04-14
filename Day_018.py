@@ -241,3 +241,60 @@ color_list = [(25, 108, 164),
               (144, 108, 56),
               (102, 197, 219),
               (206, 166, 29)]
+
+
+# This part creates the dotted painting:
+
+from turtle import Turtle, Screen
+import random
+
+
+color_list = [
+    (25, 108, 164),
+    (194, 38, 81),
+    (238, 161, 49),
+    (234, 215, 85),
+    (226, 237, 228),
+    (223, 137, 176),
+    (144, 108, 56),
+    (102, 197, 219),
+    (206, 166, 29)
+]
+
+tim = Turtle()
+tim.shape("turtle")
+tim.pensize(3)
+tim.speed(0)
+
+
+Y_DISPLACEMENT = 50
+
+X_ALIGN = -300
+Y_ALIGN = -300
+
+
+def shape():
+    """ Draws a shape. """
+
+    tim.dot(20)
+
+
+def position():
+    """ Changes the position of the turtle. """
+    tim.setposition(X_ALIGN, Y_ALIGN)
+
+    # def change_color():
+    #     """ Changes the color of the turtle. """
+
+    #     R = color_list[0]
+    #     B = color_list[1]
+    #     G = color_list[2]
+    #     tim.color(R, G, B)
+
+
+for y in range(10):
+    shape()
+    # change_color()
+
+screen = Screen()
+screen.exitonclick()?
