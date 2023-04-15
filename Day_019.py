@@ -18,3 +18,17 @@ def move_forward():
 screen.listen()
 screen.onkey(key="space", fun=move_forward)
 screen.exitonclick()
+
+# This part is like some sort of combining different functions together.
+# We pass in the outcome of one function into income of the other function.
+
+
+# def function_a(something):
+
+#     # Do this with something
+#     # Then do this
+#     # Finally do this
+
+
+# def function_b(function_a):
+#     # Do this
