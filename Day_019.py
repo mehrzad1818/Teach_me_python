@@ -69,6 +69,7 @@ def reset():
 screen.listen()
 screen.exitonclick
 
+
 screen.onkey(key="w", fun=move_forward)
 screen.onkey(key="s", fun=move_backward)
 screen.onkey(key="d", fun=yaw_clockwise)
