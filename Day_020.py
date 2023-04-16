@@ -12,13 +12,24 @@
 # 7. detect collision with tail
 
 
-from turtle import Screen, Turtle
+from turtle import Turtle, Screen
 
 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
+
+x_positions = [0, -20, -40]
+all_snakes_body = []
+
+
+for turtle_index in range(0, 3):
+    snakes_body = Turtle(shape="square")
+    snakes_body.penup()
+    snakes_body.color("white")
+    snakes_body.goto(x=x_positions[turtle_index], y=0)
+    all_snakes_body.append(snakes_body)
 
 
 screen.exitonclick()
