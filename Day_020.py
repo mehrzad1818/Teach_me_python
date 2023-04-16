@@ -13,12 +13,13 @@
 
 
 from turtle import Turtle, Screen
-
+import time
 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
+screen.tracer(0)
 
 x_positions = [0, -20, -40]
 all_snakes_body = []
@@ -30,6 +31,14 @@ for turtle_index in range(0, 3):
     snakes_body.color("white")
     snakes_body.goto(x=x_positions[turtle_index], y=0)
     all_snakes_body.append(snakes_body)
+
+
+game_is_on = True
+while game_is_on:
+    for snakes in all_snakes_body:
+        snakes.forward(20)
+        screen.update()
+        time.sleep(1)
 
 
 screen.exitonclick()
