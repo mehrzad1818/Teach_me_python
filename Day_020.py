@@ -34,6 +34,7 @@ for turtle_index in range(0, 3):
 
 
 game_is_on = True
+
 while game_is_on:
     screen.update()
     for snakes in all_snakes_body:
@@ -41,6 +42,4 @@ while game_is_on:
 
 
 screen.exitonclick()
-
-
-# This is the end of this file
+ 
