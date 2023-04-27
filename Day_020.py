@@ -36,11 +36,10 @@ for turtle_index in range(0, 3):
 game_is_on = True
 
 while game_is_on:
-    screen.update()
     for snakes in all_snakes_body:
         snakes.forward(20)
+        screen.update()
+        time.sleep(1)
 
 
 screen.exitonclick()
- 
-# I'm back motherf****s !!!
