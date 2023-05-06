@@ -1,5 +1,6 @@
 # This is the day 20 of 100 days of Python.
-# We're going to make a snake game in two days.'
+# We're going to make a snake game in two days.
+# Python's Turtle is used to porgram this game.
 
 # The problems are as follow:
 
