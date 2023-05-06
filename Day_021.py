@@ -11,5 +11,3 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
-x_positions = [0, -20, -40]
-all_snakes_body = []
