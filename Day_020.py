@@ -11,6 +11,7 @@
 # 5. create a scoreboard
 # 6. detect collision with wall
 # 7. detect collision with tail
+#8. change the turtle
 
 
 from turtle import Turtle, Screen
