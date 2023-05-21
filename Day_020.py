@@ -45,3 +45,7 @@ while game_is_on:
 
 
 screen.exitonclick()
+
+
+
+# It will be completed soon ...
