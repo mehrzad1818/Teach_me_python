@@ -4,3 +4,5 @@
 
 from turtle import Turtle, Screen
 import time
+
+from this import that
