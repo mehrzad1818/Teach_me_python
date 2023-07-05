@@ -1,6 +1,5 @@
 # This is the day 20 of 100 days of Python.
-# We're going to make a snake game in two days.
-# Python's Turtle is used to porgram this game.
+# We're going to make a snake game in two days.'
 
 # The problems are as follow:
 
@@ -11,7 +10,6 @@
 # 5. create a scoreboard
 # 6. detect collision with wall
 # 7. detect collision with tail
-# 8. change the turtle
 
 
 from turtle import Turtle, Screen
@@ -45,7 +43,3 @@ while game_is_on:
 
 
 screen.exitonclick()
-
-
-
-# It will be completed soon ...
