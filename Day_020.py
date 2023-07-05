@@ -21,15 +21,15 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
-x_positions = [0, -20, -40]
+coordinates = [(0, 0), (-20, 0), (-40, 0)]
 all_snakes_body = []
 
 
-for turtle_index in range(0, 3):
+for turtle_index in coordinates:
     snakes_body = Turtle(shape="square")
-    snakes_body.penup()
     snakes_body.color("white")
-    snakes_body.goto(x=x_positions[turtle_index], y=0)
+    snakes_body.penup()
+    snakes_body.goto(turtle_index)
     all_snakes_body.append(snakes_body)
 
 
@@ -40,6 +40,11 @@ while game_is_on:
     time.sleep(0.1)
     for snakes in all_snakes_body:
         snakes.forward(20)
+
+
+all_snakes_body[0].left(90)
+
+
 
 
 screen.exitonclick()
