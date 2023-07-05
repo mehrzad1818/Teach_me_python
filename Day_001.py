@@ -58,8 +58,8 @@ print(lenght)
 
 # This day's final code challenge, which is Day 1-4
 
-a = input("a:")
-b = input("b:")
+a = input("a : ")
+b = input("b : ")
 
 x = a
 y = b
@@ -75,8 +75,8 @@ print("b = " + b)
 # in that case you need a third cup, but I used a fourth cup,
 # I'm going to write this code down below using only one extra variable
 
-a = input("a:")
-b = input("b:")
+a = input("a : ")
+b = input("b : ")
 
 x = a
 a = b
