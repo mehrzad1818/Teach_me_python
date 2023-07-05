@@ -40,7 +40,7 @@ print("New lines can be created with a backslash and \n")
 print("Hello" + ' ' + input("What to do you like to ba called?") + '!')
 
 # This is exercise from Day 1-3
-print(len(input("Write down you name please.")))
+print(len(input("Write down you name please." )))
 # The exercise above focuses on the lenght 'len()' function which is used for calculating the number of characters inside a string.
 
 
