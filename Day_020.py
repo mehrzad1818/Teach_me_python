@@ -37,7 +37,7 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    time.sleep(1)
+    time.sleep(0.1)
     for snakes in all_snakes_body:
         snakes.forward(20)
 
