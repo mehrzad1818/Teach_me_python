@@ -1,4 +1,4 @@
-# Welcome to Day 2 of 100 Days coding challenge
+# Welcome to Day 1 of 100 Days coding challenge
 
 # '"This module is about Data types, which we're going to
 # learn 4 types of them, that is: string, float,
@@ -44,12 +44,12 @@ print(3.14 * 15.4)
 
 # Previously we encountered such piece of code:
 
-number_of_characters = len(input("What is your pet's name?"))
+number_of_characters = len(input("What is your pet's name? "))
 print("You pet's name has" + number_of_characters + "characters.")
 
 # type can be determined using type function, like below:
 
-print(type("What is the type of this type?"))
+print(type("What is the type of this type? "))
 
 # Conversion from int to str happens by using str() function
 
