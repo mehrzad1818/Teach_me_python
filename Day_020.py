@@ -83,21 +83,6 @@ class Snake:
         self.all_snakes_body[0].right(YAW)
 
 
-def yaw_clockwise():
-    """ Tim goes weeeeeee. """
-    tim.right(5)
-
-
-def yaw_c_clockwise():
-    """ Tim goes wooooooo. """
-    tim.left(5)
-
-
-def reset():
-    """ Tim goes baaaaaaaaack. """
-    tim.reset()
-
-
 screen.listen()
 screen.exitonclick
 
