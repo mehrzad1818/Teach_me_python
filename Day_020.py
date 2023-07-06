@@ -1,4 +1,4 @@
-main.py
+# main.py
 
 import time
 from turtle import Screen
@@ -30,7 +30,7 @@ while GAME_IS_ON:
 screen.exitonclick()
 
 
-snake.py
+# snake.py
 
 
 from turtle import Turtle
@@ -62,3 +62,7 @@ class Snake:
             self.all_snakes_body[snakes_part].goto(new_x, new_y)
         self.all_snakes_body[0].forward(MOVE_PITCH)
         self.all_snakes_body[0].left(YAW)
+
+    def turn_left(self):
+        """This function turns the snake to the left on the screen."""
+        
