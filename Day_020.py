@@ -1,4 +1,5 @@
-# main.py
+#main.py
+
 
 import time
 from turtle import Screen
@@ -11,13 +12,12 @@ screen.title("My Snake Game")
 screen.tracer(0)
 
 snake = Snake()
-
 screen.listen()
-screen.onkey(snake_up, "Up")
-screen.onkey(snake_down, "Down")
-screen.onkey(snake_left, "Left")
-screen.onkey(snake_right, "Right")
 
+screen.onkey(fun=snake_up, key="Up")
+screen.onkey(fun=snake_down, key="Down")
+screen.onkey(fun=snake_left, key="Left")
+screen.onkey(fun=snake_right, key="Right")
 
 GAME_IS_ON = True
 
@@ -63,6 +63,47 @@ class Snake:
         self.all_snakes_body[0].forward(MOVE_PITCH)
         self.all_snakes_body[0].left(YAW)
 
-    def turn_left(self):
-        """This function turns the snake to the left on the screen."""
-        
+
+########################
+
+    def move_left(self):
+        """This function moves the snake to the left on the screen."""
+        for snakes_part in range(len(self.all_snakes_body) - 1, 0, -1):
+            new_x = self.all_snakes_body[snakes_part - 1].xcor()
+            new_y = self.all_snakes_body[snakes_part - 1].ycor()
+            self.all_snakes_body[snakes_part].goto(new_x, new_y)
+        self.all_snakes_body[0].left(YAW)
+
+    def move_right(self):
+        """This function moves the snake to the left on the screen."""
+        for snakes_part in range(len(self.all_snakes_body) - 1, 0, -1):
+            new_x = self.all_snakes_body[snakes_part - 1].xcor()
+            new_y = self.all_snakes_body[snakes_part - 1].ycor()
+            self.all_snakes_body[snakes_part].goto(new_x, new_y)
+        self.all_snakes_body[0].right(YAW)
+
+
+def yaw_clockwise():
+    """ Tim goes weeeeeee. """
+    tim.right(5)
+
+
+def yaw_c_clockwise():
+    """ Tim goes wooooooo. """
+    tim.left(5)
+
+
+def reset():
+    """ Tim goes baaaaaaaaack. """
+    tim.reset()
+
+
+screen.listen()
+screen.exitonclick
+
+
+screen.onkey(key="w", fun=move_forward)
+screen.onkey(key="s", fun=move_backward)
+screen.onkey(key="d", fun=yaw_clockwise)
+screen.onkey(key="a", fun=yaw_c_clockwise)
+screen.onkey(key="c", fun=reset)
