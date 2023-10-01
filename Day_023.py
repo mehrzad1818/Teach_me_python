@@ -108,3 +108,15 @@ class Player(Turtle):
         """Realigns the turtle after it has hit with an obstacle or reached the other side."""
 
         self.setposition(STARTING_POSITION)
+
+
+"""Manages the score for the turtle crossing game."""
+
+
+FONT = ("Courier", 24, "normal")
+
+
+class ScoreBoard:
+    """Deals with keeping the track of score."""
+
+    pass
