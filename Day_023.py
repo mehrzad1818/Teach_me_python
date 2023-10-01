@@ -71,3 +71,40 @@ while GAME_IS_ON:
     car.car_movement()
 
 # %%
+
+
+"""Contains the player code for the turtle crossing game."""
+
+from turtle import Turtle
+
+STARTING_POSITION = (0, -280)
+MOVE_DISTANCE = 10
+FINISH_LINE_Y = 280
+
+
+class Player(Turtle):
+    """Contains the Player attributes."""
+
+    def __init__(self):
+        super().__init__()
+        self.generate_player()
+
+    def generate_player(self):
+        """Makes a snake on the screen."""
+
+        self.shape("turtle")
+        self.color("black")
+        self.penup()
+        self.setposition(STARTING_POSITION)
+        self.setheading(90)
+        self.player_speed = 0.1
+
+    def movement(self):
+        """Moves the player along y axis."""
+
+        self.forward(MOVE_DISTANCE)
+
+    def reset_position(self):
+        """Realigns the turtle after it has hit with an obstacle or reached the other side."""
+
+        self.setposition(STARTING_POSITION)
