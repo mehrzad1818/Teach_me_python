@@ -34,3 +34,40 @@ class CarManager(Turtle):
     def car_movement(self):
         """Moves the car on the screen."""
         self.forward(MOVE_INCREMENT)
+
+
+"""The next capstone is this. Turtle Crossing Game. Day 23"""
+# %%
+import time
+from turtle import Screen
+from player import Player
+from car_manager import CarManager
+
+# Object Creation:
+
+screen = Screen()
+player = Player()
+car = CarManager()
+
+# Screen Setting:
+
+screen.setup(width=600, height=600)
+screen.tracer(0)
+
+
+# Keystrokes listening:
+
+screen.listen()
+screen.onkey(player.movement, "w")
+screen.onkey(player.movement, "Up")
+
+
+# Game Runner:
+
+GAME_IS_ON = True
+while GAME_IS_ON:
+    time.sleep(0.1)
+    screen.update()
+    car.car_movement()
+
+# %%
