@@ -92,3 +92,41 @@ class Player(Turtle, CarManager):
             return True
         else:
             return False
+
+
+"""Deals with handling the car for the turtle crossing game."""
+
+import random
+from turtle import Turtle
+
+COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+STARTING_MOVE_DISTANCE = 5
+MOVE_INCREMENT = 10
+
+
+class CarManager:
+    """Manages the movement of the car and their creation."""
+
+    def __init__(self):
+        self.all_cars = []
+        self.speeding = STARTING_MOVE_DISTANCE
+
+    def car_generate(self):
+        """Generates a car-shaped turtle."""
+        random_chance = random.randint(1, 6)
+        if random_chance == 6:
+            new_car = Turtle("square")
+            new_car.shapesize(stretch_len=2, stretch_wid=1)
+            new_car.penup()
+            new_car.color(random.choice(COLORS))
+            new_car.goto(300, random.randrange(-240, 240, 20))
+            self.all_cars.append(new_car)
+
+    def car_movement(self):
+        """Moves the car on the screen."""
+        for car in self.all_cars:
+            car.backward(self.speeding)
+
+    def level_up(self):
+        """Increases the speed after each crossing over."""
+        self.speeding += MOVE_INCREMENT
