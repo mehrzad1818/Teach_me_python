@@ -3,3 +3,4 @@
 from random import randint
 
 for number in range(10):
+ add.number()
